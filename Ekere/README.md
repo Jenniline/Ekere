@@ -1,5 +1,10 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
+## About Ekere
+- Name of this project is Ekere: meaning house in Bayangi(Kenyang) Language
+- This project is to create a service where realtors can publish their listings and the progress of a listing is monitored until it is taken by a client and is no longer available. Therefore it should be pulled out of the platform.
+- Also there will be inclusion of 360 images for future implementation of VR
+
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
