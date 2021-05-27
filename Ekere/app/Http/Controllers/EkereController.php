@@ -32,4 +32,9 @@ class EkereController extends Controller
       return view('front.contact');
 
     }
+    public function signUpAgentForm()
+    {
+      return view('front.sign-up-agent');
+
+    }
 }

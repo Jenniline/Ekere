@@ -3,7 +3,7 @@
 @section('content')
 
    <!-- ======= Intro Section ======= -->
-   <div class="intro intro-carousel">
+  <div class="intro intro-carousel">
     <div id="carousel" class="owl-carousel owl-theme">
       <div class="carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/slide-1.jpg')}}) ">
         <div class="overlay overlay-a"></div>
@@ -85,7 +85,7 @@
 
 <main id="main">
         <!-- ======= Services Section ======= -->
-   <section class="section-services section-t8">
+  <section class="section-services section-t8">
     <div class="container">
       <div class="row">
         <div class="col-md-12">

@@ -40,8 +40,15 @@
           </li>
         </ul>
       </div>
-      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
-        <span class="fa fa-search" aria-hidden="true"></span>
-      </button>
+     
+      <div class="price-box d-flex-end">
+        <a href="{{route('sign-up-agent-form')}} "> <span class="price-a bg-success">Become an Agent</span></a>
+      </div>
+      
+     
     </div>
+
+    <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
+      <span class="fa fa-search" aria-hidden="true"></span>
+    </button>
   </nav><!-- End Header/Navbar -->
