@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['prefix' => '/Ekere', 'as' => ''], function () {
+    Route::get('', 'EkereController@index')->name('index');
+    Route::get('listings', 'EkereController@listings')->name('listing');
+    Route::get('agents-index', 'EkereController@agentsindex')->name('agents-index');
+    Route::get('single-agent', 'EkereController@singleagent')->name('single-agent');
+    Route::get('contact', 'EkereController@contact')->name('contact');
+
+    // Route::get('{category}/{location}/{slug}', 'HomeServiceFrontCtrl@serviceProvider')->name('details');
+    // Route::get('sign-up', 'HomeServiceFrontCtrl@signUpForm')->name('sign-up-form');
+    // Route::post('sign-up','HomeServiceFrontCtrl@signUpSubmit')->name('sign-up-submit');
+});
