@@ -26,11 +26,11 @@ class CreateAgentsTable extends Migration
             $table->integer('phone_number')->nullable()->default(null);
             $table->enum('gender',['male','female','other'])->nullable();
             $table->enum('type',['tenant','landlord','caretaker','admin', 'company']);
-            $table->string('avatar')->nullable();           
+            $table->string('avatar')->nullable(); 
+            $table->string('ID_CARD_Image')->nullable(); 
+            $table->string('life_photo')->nullable(); 
             $table->enum('status', ['new', 'processing', 'approved', 'suspended']); // 
-            $table->string('exact_address');
-            $table->text('bio');
-            // $table->integer('is_company')->default(0); 
+            $table->text('about');
             $table->boolean('is_verified')->default(false);
             $table->dateTime("last_seen")->useCurrent();
             $table->timestamps();

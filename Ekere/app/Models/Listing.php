@@ -14,4 +14,8 @@ class Listing extends Model
     {
         return $this->belongsTo('App\Models\City');
     }
+    public function listingImages()
+    {
+        return $this->hasMany('App\Models\ListingImage');
+    }
 }

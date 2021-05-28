@@ -4,22 +4,27 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Agent;
+use App\Models\Listing;
+use App\Models\ListingImage;
+use App\Models\Client;
+
+
 class EkereController extends Controller
 {
     public function index()
     {
-      return view('front.index');
-
+      $listings = Listing::all();
+      return view('front.index')
+              ->with('listings', $listings);
     }
-    public function listings()
-    {
-      return view('front.property');
 
-    }
     public function agentsindex()
     {
-      return view('front.agents-index');
-
+    //   $agents = Agent::paginate(12);
+      $agents = Agent::all();
+      return view('front.agents-index')
+              ->with('agents', $agents);
     }
     
     public function singleagent()

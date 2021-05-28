@@ -46,6 +46,7 @@
               </form>
             </div>
           </div>
+          {{-- here --}}
           <div class="col-md-4">
             <div class="card-box-a card-shadow">
               <div class="img-box-a">
@@ -93,6 +94,7 @@
               </div>
             </div>
           </div>
+          {{-- here --}}
           <div class="col-md-4">
             <div class="card-box-a card-shadow">
               <div class="img-box-a">
@@ -359,6 +361,79 @@
       </div>
     </section><!-- End Property Grid Single-->
 
+
   </main><!-- End #main -->
+
+  <div class="container">
+    <div class="row">
+        @foreach($listings as $listing)
+        <div class="col-md-4">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img src=" {{asset('img/property-1.jpg')}} " alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="#"> {{$listing->headline}}
+                     in  {{$listing->location}} 
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">rent | {{$listing->price}} FCFA </span>
+                  </div>
+                  <a href="property-single.html" class="link-a">Click here to view
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    {{-- <li>
+                      <h4 class="card-info-title">Area</h4>
+                      <span>340m
+                        <sup>2</sup>
+                      </span>
+                    </li> --}}
+                    <li>
+                      <h4 class="card-info-title">Bedroom</h4>
+                      <span>{{$listing->bedroom}} </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Bathroom</h4>
+                      <span>{{$listing->bathroom}}</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">palor</h4>
+                      <span> {{$listing->parlor}} </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Kitchen</h4>
+                      <span> {{$listing->kitchen}} </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        @endforeach
+    </div>
+  </div>
+
+
+
+ <div class="container pt-5">
+    <div class="row">
+      <div class="col-sm-12">
+        <nav class="pagination-a">
+          <ul class="pagination justify-content-center">
+            {{ $listings->links() }}            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div> 
 
 @endsection

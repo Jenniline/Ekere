@@ -20,6 +20,10 @@ class CreateListingsTable extends Migration
             $table->foreign('agent_id')->references('id')->on('agents');
             $table->unsignedBigInteger('city_id');
             $table->foreign('city_id')->references('id')->on('cities');
+            $table->integer('bedroom'); 
+            $table->integer('bathroom')->default(0); 
+            $table->integer('palor')->default(0); 
+            $table->integer('kitchen')->default(0); 
             $table->enum('operation', ['rent', 'sale'])->default('rent');
             $table->string('headline'); 
             $table->text('description'); 

@@ -18,8 +18,8 @@ Route::get('/', function () {
 });
 Route::group(['prefix' => '/Ekere', 'as' => ''], function () {
     Route::get('', 'EkereController@index')->name('index');
-    Route::get('listings', 'EkereController@listings')->name('listing');
-    Route::get('agents-index', 'EkereController@agentsindex')->name('agents-index');
+    Route::get('listings-index', 'ListingController@listingsindex')->name('listings-index');
+    Route::get('agents-index', 'AgentController@agentsindex')->name('agents-index');
     Route::get('single-agent', 'EkereController@singleagent')->name('single-agent');
     Route::get('contact', 'EkereController@contact')->name('contact');
     Route::get('sign-up-agent', 'EkereController@signUpAgentForm')->name('sign-up-agent-form');

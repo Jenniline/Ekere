@@ -19,7 +19,7 @@
             <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('listing')}} ">Property</a>
+            <a class="nav-link" href="{{route('listings-index')}} ">Property</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="blog-grid.html">Blog</a>
