@@ -16,6 +16,10 @@ class CreateAgentsTable extends Migration
         Schema::create('agents', function (Blueprint $table) {
             // $table->id();
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('listing_id');
+            $table->foreign('listing_id')->references('id')->on('listings');
+            $table->unsignedBigInteger('city_id');
+            $table->foreign('city_id')->references('id')->on('cities');
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password')->nullable();

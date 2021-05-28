@@ -185,7 +185,7 @@
                   <div class="row">
                     <div class="form-comments">
                         <div class="title-box-d">
-                          <h3 class="title-d"> Sign Up tp become an Agent</h3>
+                          <h3 class="title-d"> Sign Up to become an Agent</h3>
                         </div>
                         <form class="form-a">
                           <div class="row">

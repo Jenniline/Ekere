@@ -16,7 +16,10 @@ class CreateListingsTable extends Migration
         Schema::create('listings', function (Blueprint $table) {
             // $table->id();
             $table->bigIncrements('id');
-            // $table->integer('property_id'); 
+            $table->unsignedBigInteger('agent_id');
+            $table->foreign('agent_id')->references('id')->on('agents');
+            $table->unsignedBigInteger('city_id');
+            $table->foreign('city_id')->references('id')->on('cities');
             $table->enum('operation', ['rent', 'sale'])->default('rent');
             $table->string('headline'); 
             $table->text('description'); 
