@@ -230,16 +230,14 @@
                             </div>
 
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="exampleFormControlSelect1">City</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                      <option>Buea</option>
-                                      <option>2</option>
-                                      <option>3</option>
-                                      <option>4</option>
-                                      <option>5</option>
-                                    </select>
-                                  </div>
+                              <div class="form-group">
+                                <label for="exampleFormControlSelect1">City</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                  @foreach($cities as $city)
+                                  <option value=" {{$city->id}} "> {{$city->name}} </option>
+                                @endforeach
+                                </select>
+                              </div>
                             </div>
                             
                             {{-- <div class="col-md-12 mb-3">
