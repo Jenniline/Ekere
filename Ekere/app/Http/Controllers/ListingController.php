@@ -15,4 +15,9 @@ class ListingController extends Controller
       return view('front.property')
               ->with('listings', $listings);
     }
+    
+    public function createlisting()
+    {
+      return view('front.create-a-listing');
+    }
 }

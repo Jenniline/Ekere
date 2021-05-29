@@ -18,8 +18,21 @@
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('listings-index')}} ">Property</a>
+          <li class="nav-item dropdown ">            
+            <a class="nav-link dropdown-toggle" href="{{route('listings-index')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Property
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              {{-- <a class="dropdown-item" href="property-single.html">Property Single</a>
+              <a class="dropdown-item" href="blog-single.html">Blog Single</a> --}}
+
+              <a class="dropdown-item" href="{{route('listings-index')}}">All Listings</a>
+              <a class="dropdown-item" href="#">Single Listing</a>
+              <a class="dropdown-item bg-success text-white" href="{{route('create-a-listing')}}">Create Listing</a>
+              
+            </div>
+
           </li>
           <li class="nav-item">
             <a class="nav-link" href="blog-grid.html">Blog</a>

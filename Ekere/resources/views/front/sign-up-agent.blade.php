@@ -5,7 +5,7 @@
 
 <main id="main">
 
-       <!-- ======= Intro Section ======= -->
+   <!-- ======= Intro Section ======= -->
   <div class="intro intro-carousel">
     <div id="carousel" class="owl-carousel owl-theme">
       <div class="carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/slide-1.jpg')}}) ">

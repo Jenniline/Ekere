@@ -23,6 +23,8 @@ Route::group(['prefix' => '/Ekere', 'as' => ''], function () {
     Route::get('single-agent', 'EkereController@singleagent')->name('single-agent');
     Route::get('contact', 'EkereController@contact')->name('contact');
     Route::get('sign-up-agent', 'AgentController@signUpAgentForm')->name('sign-up-agent-form');
+    Route::get('create-a-listing', 'ListingController@createlisting')->name('create-a-listing');
+
 
     // Route::get('{category}/{location}/{slug}', 'HomeServiceFrontCtrl@serviceProvider')->name('details');
     // Route::get('sign-up', 'HomeServiceFrontCtrl@signUpForm')->name('sign-up-form');
