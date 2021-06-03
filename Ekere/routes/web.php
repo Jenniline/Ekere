@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('front.index');
+// });
+Route::get('/','EkereController@index')->name('indexonhomepage');
+
 Route::group(['prefix' => '/Ekere', 'as' => ''], function () {
     Route::get('', 'EkereController@index')->name('index');
     Route::get('listings-index', 'ListingController@listingsindex')->name('listings-index');
