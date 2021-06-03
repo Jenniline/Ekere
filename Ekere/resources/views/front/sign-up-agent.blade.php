@@ -259,12 +259,20 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="exampleFormControlFile1">Take an instant photo with Camera</label>
-                                    <br>
-                                    <div>
-                                        <img src="{{ asset('img/uploadimage.jpg')}}" alt="" width="200px">
-                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                    </div>
+                                    <label for="exampleFormControlFile1"><h3> Take an instant photo with Camera </h3> </label>
+                                    
+                                    <div class="contentarea">
+                                   
+                                      <div class="camera">
+                                          <video id="video">Video stream not available.</video>
+                                      </div>
+                                      <div><button id="startbutton">Take photo</button></div>
+                                      <canvas id="canvas"></canvas>
+                                      <div class="output">
+                                          <img id="photo" alt="The screen capture will appear in this box.">
+                                      </div>
+                                  </div>
+
                                 </div>
                             </div>
 

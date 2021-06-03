@@ -25,6 +25,8 @@
   
     <!-- Template Main CSS File -->
     <link rel="stylesheet" href=" {{asset('css/style.css')}} ">
+    <link rel="stylesheet" href=" {{asset('css/agent-lifephoto.css')}} ">
+
     {{-- JavaScript files --}}
      <!-- =======================================================
   * Template Name: EstateAgency - v2.2.1
