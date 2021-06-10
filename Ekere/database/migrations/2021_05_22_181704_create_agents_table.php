@@ -16,19 +16,17 @@ class CreateAgentsTable extends Migration
         Schema::create('agents', function (Blueprint $table) {
             // $table->id();
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('listing_id');
-            $table->foreign('listing_id')->references('id')->on('listings');
-            $table->unsignedBigInteger('city_id');
-            $table->foreign('city_id')->references('id')->on('cities');
+            $table->integer('listing_id');
+            // $table->unsignedBigInteger('listing_id');
+            // $table->foreign('listing_id')->references('id')->on('listings');
+            // $table->unsignedBigInteger('city_id');
+            // $table->foreign('city_id')->references('id')->on('cities');
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password')->nullable();
             $table->integer('phone_number')->nullable()->default(null);
             $table->enum('gender',['male','female','other'])->nullable();
-            $table->enum('type',['tenant','landlord','caretaker','admin', 'company']);
-            $table->string('avatar')->nullable(); 
-            $table->string('ID_CARD_Image')->nullable(); 
-            $table->string('life_photo')->nullable(); 
+            $table->enum('type',['tenant','landlord','caretaker','admin', 'company']); 
             $table->enum('status', ['new', 'processing', 'approved', 'suspended']); // 
             $table->text('about');
             $table->boolean('is_verified')->default(false);

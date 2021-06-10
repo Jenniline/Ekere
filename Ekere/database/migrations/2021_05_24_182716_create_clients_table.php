@@ -19,6 +19,7 @@ class CreateClientsTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->integer('phone_number')->nullable()->default(null);
+            $table->unsignedBigInteger('city_id');
             $table->timestamps();
     
         });

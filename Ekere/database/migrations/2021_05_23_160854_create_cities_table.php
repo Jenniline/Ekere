@@ -15,10 +15,8 @@ class CreateCitiesTable extends Migration
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedBigInteger('agent');
+            $table->unsignedBigInteger('agent_id');
             $table->foreign('agent_id')->references('id')->on('agents');
-            $table->unsignedBigInteger('listing_id');
-            $table->foreign('listing_id')->references('id')->on('listings');
             $table->string('name',60);
             $table->timestamps();
         });

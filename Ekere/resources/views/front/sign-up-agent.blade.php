@@ -187,31 +187,33 @@
                         <div class="title-box-d">
                           <h3 class="title-d"> Sign Up to become an Agent</h3>
                         </div>
-                        <form class="form-a">
+                        <form class="form-a" method="POST" action="{{route('store-agent')}}">
+                          {!! csrf_field() !!}
+                          @csrf
                           <div class="row">
                             <div class="col-md-6 mb-3">
                               <div class="form-group">
                                 <label for="inputName">Enter name</label>
-                                <input type="text" class="form-control form-control-lg form-control-a" id="inputName" placeholder="Name *" required>
+                                <input type="text" class="form-control form-control-lg form-control-a" name="agent_name" placeholder="Name *">
                               </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="form-group">
                                   <label for="inputName">Enter Phone Number</label>
-                                  <input type="number" class="form-control form-control-lg form-control-a" id="inputPhoneNUmber" placeholder="Phone Number *" required>
+                                  <input type="number" class="form-control form-control-lg form-control-a" id="inputPhoneNUmber" name="agent_phone_number" placeholder="Phone Number *">
                                 </div>
                             </div>
 
                             <div class="col-md-6 mb-3">
                               <div class="form-group">
                                 <label for="inputEmail1">Enter email</label>
-                                <input type="email" class="form-control form-control-lg form-control-a" id="inputEmail1" placeholder="Email *" required>
+                                <input type="email" class="form-control form-control-lg form-control-a" id="inputEmail1" name="agent_email" placeholder="Email *">
                               </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                    <input type="password" class="form-control" id="exampleInputPassword1" name="agent_password"> 
                                 </div>
                             </div>
                             
@@ -219,7 +221,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleFormControlSelect1">Type of Agent</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
+                                    <select class="form-control" id="exampleFormControlSelect1" name="type-of-agent">
                                       <option>Landlord</option>
                                       <option>2</option>
                                       <option>3</option>
@@ -229,16 +231,27 @@
                                   </div>
                             </div>
 
-                            <div class="col-md-6">
+                            {{-- <div class="col-md-6">
                               <div class="form-group">
                                 <label for="exampleFormControlSelect1">City</label>
-                                <select class="form-control" id="exampleFormControlSelect1">
+                                <select class="form-control" id="exampleFormControlSelect1" name="city_id">
                                   @foreach($cities as $city)
                                   <option value=" {{$city->id}} "> {{$city->name}} </option>
                                 @endforeach
                                 </select>
+                                <select name="city_id" class="form-control" required>
+                                  <option value="">select City</option>
+                                  @foreach ($cities as $city)
+                                    <option {{ $city->name == 'Buea' ? 'selected' : '' }} value="{{$city->id}}"> {{$city->name}} </option> <br>
+                                  @endforeach
+                                  @if ($errors->has('city_id'))
+                                  <span class="help-block">
+                                    <strong>{{ $errors->first('city_id') }}</strong>
+                                  </span>
+                                 @endif
+                                </select>
                               </div>
-                            </div>
+                            </div> --}}
                             
                             {{-- <div class="col-md-12 mb-3">
                               <div class="form-group">
@@ -246,43 +259,44 @@
                                 <input type="url" class="form-control form-control-lg form-control-a" id="inputUrl" placeholder="Website">
                               </div>
                             </div> --}}
-                            <div class="col-md-6">
+                            {{-- <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleFormControlFile1">Upload Front Image of National ID CARD</label>
                                     <br>
                                     <div>
                                         <img src="{{ asset('img/uploadimage.jpg')}}" alt="" width="200px">
-                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">                                        
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="ID-image">                                        
                                     </div>
                                   
                                 </div>
-                            </div>
-                            <div class="col-md-6">
+                            </div> --}}
+                            {{-- <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="exampleFormControlFile1"><h3> Take an instant photo with Camera </h3> </label>
-                                    
-                                    <div class="contentarea">
-                                   
-                                      <div class="camera">
-                                          <video id="video">Video stream not available.</video>
-                                      </div>
-                                      <div><button id="startbutton">Take photo</button></div>
-                                      <canvas id="canvas"></canvas>
-                                      <div class="output">
-                                          <img id="photo" alt="The screen capture will appear in this box.">
-                                      </div>
+                                  <label for="exampleFormControlFile1"><h3> Take an instant photo with Camera </h3> </label>
+                                  
+                                  <div class="contentarea">
+                                  
+                                    <div class="camera">
+                                        <video id="video">Video stream not available.</video>
+                                    </div>
+                                    <div><button id="startbutton">Take photo</button></div>
+                                    <canvas id="canvas"></canvas>
+                                    <div class="output">
+                                        <img id="photo" type="file" alt="The screen capture will appear in this box.">
+                                    </div>
                                   </div>
 
                                 </div>
-                            </div>
+                            </div> --}}
 
 
                             <div class="col-md-12 mb-3">
                               <div class="form-group">
                                 <label for="textMessage">Bio</label>
-                                <textarea id="textMessage" class="form-control" placeholder="Tell us About yourself *" name="message" cols="45" rows="8" required></textarea>
+                                <textarea id="bio" class="form-control" placeholder="Tell us About yourself *" name="agent_bio" cols="45" rows="8"></textarea>
                               </div>
-                            </div>
+                            </div> 
+
                             <div class="col-md-12">
                               <button type="submit" class="btn btn-a btn-lg btn-block">Submit</button>
                             </div>

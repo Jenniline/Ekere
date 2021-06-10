@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateListingsImagesTable extends Migration
+class CreateAgentImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,17 @@ class CreateListingsImagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('listings_images', function (Blueprint $table) {
+        Schema::create('agent_images', function (Blueprint $table) {
             // $table->id();
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('listing_id')->onDelete('casacade');
+            $table->unsignedBigInteger('agent_id')->onDelete('casacade');
             $table->string('name');
             $table->string('path');
             $table->string('url');
-            $table->foreign('listing_id')->references('id')->on('listings'); 
+            $table->string('avatar')->nullable(); 
+            $table->string('ID_CARD_Image')->nullable(); 
+            $table->string('life_photo')->nullable(); 
+            $table->foreign('agent_id')->references('id')->on('agents'); 
             $table->timestamps();
         });
     }
@@ -32,6 +35,6 @@ class CreateListingsImagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('listings_images');
+        Schema::dropIfExists('agent_images');
     }
 }
