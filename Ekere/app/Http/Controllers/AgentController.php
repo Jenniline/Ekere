@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Agent;
+use App\Models\AgentImage;
 use App\Models\City;
 
 
@@ -33,30 +34,53 @@ class AgentController extends Controller
       //  $this->validate($request,[
       //    'agent_name' => 'required',
       //    'agent_phone_number' => 'required', //check from,
-      //    'agent_email' => 'required',
-      //    'agent_password' => 'required|min:6',
-      //   //  'type-of-agent' => 'required',
-      //   //  'city_id' => 'required',
+      //   //  'agent_email' => 'required',
+      //   //  'agent_password' => 'required|min:6',
+      //     // 'type-of-agent' => 'required',
+      //     // 'city_id' => 'required',
       //   //  'ID-image' => 'required',
       //    'bio' => 'required',
       //  ]);
-
          
-       $agent = new Agent;
-       $agent->name = $request->agent_name;
-       $agent->phone_number = $request->agent_phone_number;
-       $agent->email = $request->agent_email;
-       $agent->password = $request->agent_password;
-       $agent->bio = $request->agent_bio;
-
+      // dd($request->all());
+      $agent = new Agent;
+      $agent->name = $request->agent_name;
+      $agent->phone_number = $request->agent_phone_number;
+      $agent->email = $request->agent_email;
+      $agent->password = $request->agent_password;
+      $agent->bio = $request->agent_bio;
       //  $agent->city_id = $request->city_id;
-       $agent->save();
+      $agent->save();
 
+      if($request->hasFile('idimage')) {
+        $idimage = $request->idimage;
+        // $lifephoto = $request->lifephoto;
+
+        // $images = $input['images'];
+        // $image_details = array();
+        $path = $request->file('idimage')->store('public/agentImages');
+        $exploded_string = explode("public", $path);
+        $ID_CARD_Image = asset("storage/{$exploded_string[0]}/{$exploded_string[1]}");
+
+        $agentimage = new AgentImage;
+        $agentimage->ID_CARD_Image = $ID_CARD_Image;
+        
+        $agentimage->agent_id = $agent->id;
+        $agentimage->save();
+                
+        return response()->json([
+            "success"=>true,
+            "message"=> "Agent stored successfully"
+        ], 200);
+        
+      }
+    
+      
 
       //  now get the ID image and get life photo image
 
-      return redirect()->route('front.agent_success')->with('agent',$agent);
-
+      // return view('front.agent_success');
+        // return $agent;
 
     }
 

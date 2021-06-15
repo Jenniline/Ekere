@@ -16,6 +16,7 @@
             canvas = document.getElementById('canvas');
             photo = document.getElementById('photo');
             startbutton = document.getElementById('startbutton');
+            lifephoto= document.getElementById("lifephoto");
     
             navigator.mediaDevices.getUserMedia({
                     video: true,
@@ -61,6 +62,7 @@
     
                 var data = canvas.toDataURL('image/png');
                 photo.setAttribute('src', data);
+                lifephoto.setAttribute('value',data);
             }
     
             function takepicture() {

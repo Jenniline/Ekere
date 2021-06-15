@@ -187,7 +187,7 @@
                         <div class="title-box-d">
                           <h3 class="title-d"> Sign Up to become an Agent</h3>
                         </div>
-                        <form class="form-a" method="POST" action="{{route('store-agent')}}">
+                        <form class="form-a" method="POST" action="{{route('store-agent')}}" enctype="multipart/form-data">
                           {!! csrf_field() !!}
                           @csrf
                           <div class="row">
@@ -253,24 +253,24 @@
                               </div>
                             </div> --}}
                             
-                            {{-- <div class="col-md-12 mb-3">
+                            <div class="col-md-12 mb-3">
                               <div class="form-group">
                                 <label for="inputUrl">Enter website</label>
                                 <input type="url" class="form-control form-control-lg form-control-a" id="inputUrl" placeholder="Website">
                               </div>
-                            </div> --}}
-                            {{-- <div class="col-md-6">
+                            </div> 
+                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleFormControlFile1">Upload Front Image of National ID CARD</label>
                                     <br>
                                     <div>
                                         <img src="{{ asset('img/uploadimage.jpg')}}" alt="" width="200px">
-                                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="ID-image">                                        
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="idimage">                                        
                                     </div>
                                   
                                 </div>
-                            </div> --}}
-                            {{-- <div class="col-md-6">
+                            </div> 
+                             <div class="col-md-6">
                                 <div class="form-group">
                                   <label for="exampleFormControlFile1"><h3> Take an instant photo with Camera </h3> </label>
                                   
@@ -283,11 +283,12 @@
                                     <canvas id="canvas"></canvas>
                                     <div class="output">
                                         <img id="photo" type="file" alt="The screen capture will appear in this box.">
+                                        <input type="file" id="lifephoto" name="lifephoto" hidden>
                                     </div>
                                   </div>
 
                                 </div>
-                            </div> --}}
+                            </div> 
 
 
                             <div class="col-md-12 mb-3">
