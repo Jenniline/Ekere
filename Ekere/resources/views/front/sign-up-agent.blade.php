@@ -261,13 +261,12 @@
                             </div> 
                              <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="exampleFormControlFile1">Upload Front Image of National ID CARD</label>
-                                    <br>
-                                    <div>
-                                        <img src="{{ asset('img/uploadimage.jpg')}}" alt="" width="200px">
-                                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="idimage">                                        
-                                    </div>
-                                  
+                                  <label for="exampleFormControlFile1"> <h3> Upload Front Image of National ID CARD</h3> </label>
+                                  <br>
+                                  <div>
+                                      <img src="{{ asset('img/uploadimage.jpg')}}" alt="" width="200px">
+                                      <input type="file" class="form-control-file" id="exampleFormControlFile1" name="idimage">                                        
+                                  </div> 
                                 </div>
                             </div> 
                              <div class="col-md-6">

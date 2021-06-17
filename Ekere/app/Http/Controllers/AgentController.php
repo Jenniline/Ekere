@@ -60,8 +60,12 @@ class AgentController extends Controller
         // $image_details = array();
         $path = $request->file('idimage')->store('public/agentImages');
         $exploded_string = explode("public", $path);
-        $ID_CARD_Image = asset("storage/{$exploded_string[0]}/{$exploded_string[1]}");
 
+        // $ID_CARD_Image = asset("storage/{$exploded_string[0]}/{$exploded_string[1]}");
+        $ID_CARD_Image = asset("storage{$exploded_string[1]}");
+        $indexone = $exploded_string[1];
+
+        explode("agentImages", $indexone);
         $agentimage = new AgentImage;
         $agentimage->ID_CARD_Image = $ID_CARD_Image;
         
