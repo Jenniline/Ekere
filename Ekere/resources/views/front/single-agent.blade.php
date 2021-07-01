@@ -65,10 +65,7 @@
                         <strong>Phone: </strong>
                         <span class="color-text-a"> +54 356 945234 </span>
                       </p>
-                      <p>
-                        <strong>Mobile: </strong>
-                        <span class="color-text-a"> 999 123 456 789</span>
-                      </p>
+                      
                       <p>
                         <strong>Email: </strong>
                         <span class="color-text-a"> agents@example.com</span>

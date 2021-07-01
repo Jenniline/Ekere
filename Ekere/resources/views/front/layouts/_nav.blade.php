@@ -29,7 +29,7 @@
 
               <a class="dropdown-item" href="{{route('listings-index')}}">All Listings</a>
               <a class="dropdown-item" href="#">Single Listing</a>
-              <a class="dropdown-item bg-success text-white" href="{{route('create-a-listing')}}">Create Listing</a>
+              {{-- <a class="dropdown-item bg-success text-white" href="{{route('create-a-listing')}}">Create Listing</a> --}}
               
             </div>
 
@@ -45,7 +45,7 @@
               {{-- <a class="dropdown-item" href="property-single.html">Property Single</a>
               <a class="dropdown-item" href="blog-single.html">Blog Single</a> --}}
               <a class="dropdown-item" href="{{route('agents-index')}}">Agents Grid</a>
-              <a class="dropdown-item" href="{{route('single-agent')}} ">Agent Single</a>
+              <a class="dropdown-item" href="{{route('agent-single')}} ">Agent Single</a>
             </div>
           </li>
           <li class="nav-item">
@@ -55,7 +55,8 @@
       </div>
      
       <div class="price-box d-flex-end">
-        <a href="{{route('sign-up-agent-form')}} "> <span class="price-a bg-success">Become an Agent</span></a>
+        {{-- <a href="{{route('agent-rules-modal')}}"> <span class="price-a bg-success">Become an Agent</span></a> --}}
+        <a href="{{route('sign-up-agent-form')}}"> <span class="price-a bg-success text-white">Become an Agent</span></a>
       </div>
       
      

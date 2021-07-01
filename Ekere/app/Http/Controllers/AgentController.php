@@ -10,6 +10,12 @@ use App\Models\City;
 
 class AgentController extends Controller
 {
+
+  // public function __construct()
+    // {
+    //     $this->middleware(['auth','verified']);
+    // }
+  
     public function agentsindex()
     {
       $agents = Agent::paginate(12);
@@ -28,11 +34,21 @@ class AgentController extends Controller
               ->with('cities', $cities);
     }
     
+    public function agentRulesModal()
+    {
+      return view('front.agent_rules_modal');
+    }
+
+    public function agentSingle()
+    {
+      return view('front.agent_single');
+    }
+
+
     public function storeAgent(Request $request)
     {
       //  print_r($request->input());
       //  $this->validate($request,[
-      //    'agent_name' => 'required',
       //    'agent_phone_number' => 'required', //check from,
       //   //  'agent_email' => 'required',
       //   //  'agent_password' => 'required|min:6',
@@ -40,8 +56,9 @@ class AgentController extends Controller
       //     // 'city_id' => 'required',
       //   //  'ID-image' => 'required',
       //    'bio' => 'required',
-      //  ]);
-         
+      //  ]);     'agent_name' => 'required',
+    
+    
       // dd($request->all());
       $agent = new Agent;
       $agent->name = $request->agent_name;
@@ -59,7 +76,11 @@ class AgentController extends Controller
         // $images = $input['images'];
         // $image_details = array();
         $path = $request->file('idimage')->store('public/agentImages');
+
         $exploded_string = explode("public", $path);
+        // $exploded_string = explode("agentImages", $path);
+
+        // dd($exploded_string);
 
         // $ID_CARD_Image = asset("storage/{$exploded_string[0]}/{$exploded_string[1]}");
         $ID_CARD_Image = asset("storage{$exploded_string[1]}");
@@ -67,9 +88,11 @@ class AgentController extends Controller
 
         explode("agentImages", $indexone);
         $agentimage = new AgentImage;
-        $agentimage->ID_CARD_Image = $ID_CARD_Image;
-        
         $agentimage->agent_id = $agent->id;
+        $agentimage->path = "/storage";
+        $agentimage->ID_CARD_Image = $ID_CARD_Image;
+        // $agentimage->ID_CARD_Image = $lifephoto;
+
         $agentimage->save();
                 
         return response()->json([
@@ -87,6 +110,5 @@ class AgentController extends Controller
         // return $agent;
 
     }
-
-
+  // }
 }

@@ -1327,7 +1327,8 @@ a:hover {
 }
 
 .price-a {
-  color: #ffffff;
+  /* color: #ffffff; */
+  color: #000000;
   padding: .6rem .8rem;
   border: 2px solid #2eca6a;
   border-radius: 50px;
@@ -1339,6 +1340,9 @@ a:hover {
   width: 100%;
   position: absolute;
   z-index: 2;
+  background-color: #2eca6a;
+}
+.listing-amenities{
   background-color: #2eca6a;
 }
 
@@ -1438,7 +1442,13 @@ a:hover {
 .property-agent .title-agent {
   font-weight: 600;
 }
-
+#icons{
+  color: #00d191;
+  border: 2px solid #00d191; 
+  border-radius: 50px; 
+  /* size: 1000px; */
+  padding: 10px;
+}
 .property-agent ul {
   line-height: 2;
   color: #000000;
