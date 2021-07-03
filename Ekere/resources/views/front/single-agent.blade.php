@@ -63,7 +63,7 @@
                     <div class="info-agents color-a">
                       <p>
                         <strong>Phone: </strong>
-                        <span class="color-text-a"> +54 356 945234 </span>
+                        <span class="color-text-a"> +54 356 945234 <i class="fas fa-check-circle"></i> </span> 
                       </p>
                       
                       <p>

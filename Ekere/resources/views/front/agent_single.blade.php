@@ -10,8 +10,9 @@
         <div class="row">
           <div class="col-md-12 col-lg-8">
             <div class="title-single-box">
-              <h1 class="title-single">Jenniline Ebai</h1>
-              <span class="color-text-a">Agent Immobiliari</span>
+              <i id="icons" class="fa fa-check-circle fa-2x"> verified agent</i>
+              <h1 class="title-single">Jenniline Ebai</h1>  
+              <span class="color-text-a">real estate agent</span>
             </div>
           </div>
           <div class="col-md-12 col-lg-4">
@@ -61,12 +62,12 @@
                     <div class="info-agents color-a">
                       <p>
                         <strong>Phone: </strong>
-                        <span class="color-text-a"> +237 680497435 </span>
+                        <span class="color-text-a"> +237 680497435 <i id="icons" class="fa fa-check-circle fa-2x"> verified</i> </span>
                       </p>
                       
                       <p>
                         <strong>Email: </strong>
-                        <span class="color-text-a"> jennilineebai@gmail.com</span>
+                        <span class="color-text-a"> jennilineebai@gmail.com <i id="icons" class="fa fa-check-circle fa-2x"> verified</i> </span>
                       </p>
                       <p>
                         <strong>skype: </strong>
@@ -76,32 +77,32 @@
                     </div>
                   </div>
                   <div class="socials-footer p-4">
-                    <h3 class="bg-success text-white p-2">Follow me on Social media</h3>
+                    <h3 class="p-2">Follow me on Social media</h3>
 
                     <ul class="list-inline">
                       <li class="list-inline-item">
                         <a href="#" class="link-one">
-                          <i id="icons" class="fa fa-facebook fa-2x" aria-hidden="true"></i> 
+                          <i class="fa fa-facebook fa-2x" aria-hidden="true"></i> 
                         </a>
                       </li>
                       <li class="list-inline-item">
                         <a href="#" class="link-one">
-                          <i  id="icons" class="fa fa-twitter fa-2x" aria-hidden="true"></i> 
+                          <i class="fa fa-twitter fa-2x" aria-hidden="true"></i> 
                         </a>
                       </li>
                       <li class="list-inline-item">
                         <a href="#" class="link-one">
-                          <i id="icons" class="fa fa-pinterest fa-2x" aria-hidden="true"></i>
+                          <i class="fa fa-pinterest fa-2x" aria-hidden="true"></i>
                         </a>
                       </li>
                       <li class="list-inline-item">
                         <a href="#" class="link-one">
-                          <i id="icons" class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                          <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
                         </a>
                       </li>
                       <li class="list-inline-item">
                         <a href="#" class="link-one">
-                          <i id="icons" class="fa fa-dribbble fa-2x" aria-hidden="true"></i>
+                          <i class="fa fa-dribbble fa-2x" aria-hidden="true"></i>
                         </a>
                       </li>
                       {{-- <li class="list-inline-item">
