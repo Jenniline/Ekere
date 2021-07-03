@@ -39,11 +39,10 @@ class AgentController extends Controller
       return view('front.agent_rules_modal');
     }
 
-    public function agentSingle()
+    public function agentJenn()
     {
-      return view('front.agent_single');
+      return view('front.agent_jenn');
     }
-
 
     public function storeAgent(Request $request)
     {
@@ -66,7 +65,9 @@ class AgentController extends Controller
       $agent->email = $request->agent_email;
       $agent->password = $request->agent_password;
       $agent->bio = $request->agent_bio;
-      //  $agent->city_id = $request->city_id;
+      $agent->type = $request->type_of_agent;
+      $agent->gender = $request->gender;
+      $agent->city_id = $request->city_id;
       $agent->save();
 
       if($request->hasFile('idimage')) {
@@ -100,15 +101,19 @@ class AgentController extends Controller
             "message"=> "Agent stored successfully"
         ], 200);
         
-      }
-    
-      
+      }     
 
       //  now get the ID image and get life photo image
-
       // return view('front.agent_success');
         // return $agent;
-
     }
+
+         // show
+         public function showAgent($id)
+         {
+          $agent=Agent::find($id);
+          return view('front.show-agent')
+                 ->with('agent', $agent);    
+         } 
   // }
 }

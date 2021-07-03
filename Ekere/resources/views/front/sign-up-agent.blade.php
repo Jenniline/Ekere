@@ -217,29 +217,39 @@
                                 </div>
                             </div>
                             
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="exampleFormControlSelect1">Gender</label>
+                                  <select class="form-control" id="gender" name="gender">
+                                    <option value="gender">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                  </select>
+                                </div>
+                          </div>
 
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleFormControlSelect1">Type of Agent</label>
-                                    <select class="form-control" id="exampleFormControlSelect1" name="type-of-agent">
-                                      <option>Landlord</option>
-                                      <option>2</option>
-                                      <option>3</option>
-                                      <option>4</option>
-                                      <option>5</option>
+                                    <select class="form-control" id="exampleFormControlSelect1" name="type_of_agent">
+                                      <option value="landlord">Landlord</option>
+                                      <option value="tenant">Tenant</option>
+                                      <option value="caretaker">Care taker</option>
+                                      <option value="company">Company</option>
+                                      <option value="admin">Admin</option>
                                     </select>
                                   </div>
                             </div>
 
-                            {{-- <div class="col-md-6">
+                            <div class="col-md-6">
                               <div class="form-group">
                                 <label for="exampleFormControlSelect1">City</label>
                                 <select class="form-control" id="exampleFormControlSelect1" name="city_id">
                                   @foreach($cities as $city)
                                   <option value=" {{$city->id}} "> {{$city->name}} </option>
-                                @endforeach
+                                  @endforeach
                                 </select>
-                                <select name="city_id" class="form-control" required>
+                                {{-- <select name="city_id" class="form-control" required>
                                   <option value="">select City</option>
                                   @foreach ($cities as $city)
                                     <option {{ $city->name == 'Buea' ? 'selected' : '' }} value="{{$city->id}}"> {{$city->name}} </option> <br>
@@ -249,11 +259,11 @@
                                     <strong>{{ $errors->first('city_id') }}</strong>
                                   </span>
                                  @endif
-                                </select>
+                                </select> --}}
                               </div>
-                            </div> --}}
+                            </div> 
                             
-                            <div class="col-md-12 mb-3">
+                            <div class="col-md-6 mb-3">
                               <div class="form-group">
                                 <label for="inputUrl">Enter website</label>
                                 <input type="url" class="form-control form-control-lg form-control-a" id="inputUrl" placeholder="Website">

@@ -31,7 +31,11 @@ Route::group(['prefix' => '/Ekere', 'as' => ''], function () {
     //Agent  Controllers
     Route::get('sign-up-agent', 'AgentController@signUpAgentForm')->name('sign-up-agent-form');
     Route::post('store-agent', 'AgentController@storeAgent')->name('store-agent');
-    Route::get('agent-single', 'AgentController@agentSingle')->name('agent-single');
+    Route::get('show-agent/{agent}', 'AgentController@showAgent')->name('show-agent');
+    // Route::get('/show-category/{category}', 'CategoryController@show')->name('show-category');
+
+    Route::get('agent-jenn', 'AgentController@agentJenn')->name('agent-jenn');
+
         
     //listing  Controllers
     Route::get('create-listing', 'ListingController@createlisting')->name('create-listing');
