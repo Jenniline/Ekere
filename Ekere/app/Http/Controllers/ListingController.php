@@ -14,7 +14,7 @@ class ListingController extends Controller
     {
       $listings = Listing::paginate(12);
       // $listings = Listing::all();
-      return view('front.property')
+      return view('front.listing-index')
             ->with('listings', $listings);
     }
     
