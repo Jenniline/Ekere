@@ -6,7 +6,7 @@
         <span></span>
         <span></span>
       </button>
-      <a class="navbar-brand text-brand" href="index.html">Ekere<span class="color-b">Haus</span></a>
+      <a class="navbar-brand text-brand" href="index.html">Safe<span class="color-b">Housing</span></a>
       <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
         <span class="fa fa-search" aria-hidden="true"></span>
       </button>
@@ -28,7 +28,7 @@
               <a class="dropdown-item" href="blog-single.html">Blog Single</a> --}}
 
               <a class="dropdown-item" href="{{route('listings-index')}}">All Listings</a>
-              <a class="dropdown-item" href="#">Single Listing</a>
+              <a class="dropdown-item" href=" {{route('create-listing')}} ">Create a listing</a>
               {{-- <a class="dropdown-item bg-success text-white" href="{{route('create-a-listing')}}">Create Listing</a> --}}
               
             </div>

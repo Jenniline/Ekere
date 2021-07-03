@@ -26,29 +26,25 @@ Route::group(['prefix' => '/Ekere', 'as' => ''], function () {
     Route::get('agents-index', 'AgentController@agentsindex')->name('agents-index');
     Route::get('single-agent', 'EkereController@singleagent')->name('single-agent');
     Route::get('contact', 'EkereController@contact')->name('contact');
-    Route::get('sign-up-agent', 'AgentController@signUpAgentForm')->name('sign-up-agent-form');
     Route::get('agent-rules-modal', 'AgentController@agentRulesModal')->name('agent-rules-modal');
+    
+    //Agent  Controllers
+    Route::get('sign-up-agent', 'AgentController@signUpAgentForm')->name('sign-up-agent-form');
     Route::post('store-agent', 'AgentController@storeAgent')->name('store-agent');
-
     Route::get('agent-single', 'AgentController@agentSingle')->name('agent-single');
+        
+    //listing  Controllers
+    Route::get('create-listing', 'ListingController@createlisting')->name('create-listing');
+    Route::post('store-listing', 'ListingController@storeListing')->name('store-listing');
 
     
-
-
-    // Route::get('{category}/{location}/{slug}', 'HomeServiceFrontCtrl@serviceProvider')->name('details');
-    // Route::get('sign-up', 'HomeServiceFrontCtrl@signUpForm')->name('sign-up-form');
-    // Route::post('sign-up','HomeServiceFrontCtrl@signUpSubmit')->name('sign-up-submit');
-
-
 });
+    
+    // Route::get('profile', function () {
+    //  // Only verified users may enter...
+    //    Route::get('create-a-listing', 'ListingController@createlisting')->name('create-a-listing');
 
-   /** 
-    * 
-    * Route::get('profile', function () {
-    *  // Only verified users may enter...
-    *   Route::get('create-a-listing', 'ListingController@createlisting')->name('create-a-listing');
-
-    * })->middleware('verified');*/ 
+    // })->middleware('verified'); 
 
 
 Auth::routes();

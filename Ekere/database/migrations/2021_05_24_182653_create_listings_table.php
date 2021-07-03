@@ -33,11 +33,12 @@ class CreateListingsTable extends Migration
             $table->string('availability')->default('available');
             $table->integer('created_by'); //The user id who created the listing is stored here. 
             $table->integer('price')->default(0);  
-            $table->integer('units')->default(1); 
             $table->bigInteger('views')->default(0);
             $table->boolean('bookable')->default(0);
             $table->integer('position')->default(1);
             $table->boolean('is_verified')->default(0); 
+            $table->float('latitude', 12, 8)->nullable(); 
+            $table->float('longitude', 12, 8)->nullable();
             $table->float('discount_price', 8, 2)->default(null);
             $table->datetime('featured_until')->default(null);
             $table->datetime('last_check')->useCurrent(); // default supposed to be current timestamp
