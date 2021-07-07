@@ -21,7 +21,7 @@ class ListingController extends Controller
     public function createlisting()
     {
       $cities = City::all();
-      return view('front.create-a-listing')->with('cities',$cities);
+      return view('front.create-listing')->with('cities',$cities);
     }
 
     public function storeListing(Request $request)
@@ -36,16 +36,38 @@ class ListingController extends Controller
        $listing->kitchen = $request->kitchen; 
        $listing->price = $request->price; 
        $listing->city_id = $request->city_id; //city_id
+      //  Ask Boss about latitude and longitude
        $listing->latitude = !empty($input['latitude']) ? $input['latitude'] : null;
        $listing->longitude = !empty($input['longitude']) ? $input['longitude'] : null;
       //  $listing->created_by = $request->user()->id;
        $listing->status = 1;
        $listing->save(); 
-  
+
+
+      // Image code begins here 
+
+      if($request->hasFile('bedroomimage')) {
+        $bedroomimage = $request->bedroomimage;
+        $path = $request->file('bedroomimage')->store('public/listingImages');
+
+        $exploded_string = explode("public", $path);
+        $bedroomimage = asset("storage{$exploded_string[1]}");
+        $indexone = $exploded_string[1];
+        
+        explode("listingImages", $indexone);
+        $listingimage = new ListingImage;
+        $listingimage->listing_id = $listing->id;
+        $listingimage->path = "/storage";
+        $listingimage->bedroomimage = $bedroomimage;
+
+        $listingimage->save();
+        
       return response()->json([
         "success"=>true,
         "message"=> "Listing stored successfully"
-    ], 200);
+      ], 200);
+
+    }
 
     }
 }

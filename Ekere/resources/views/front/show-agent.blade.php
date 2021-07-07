@@ -11,7 +11,7 @@
           <div class="col-md-12 col-lg-8">
             <div class="title-single-box">
               <i id="icons" class="fa fa-check-circle fa-2x"> verified agent</i>
-              <h1 class="title-single">{{$agent->name}}</h1>  
+              <h1 class="title-single"> {{$agent->name}}</h1>  
               <span class="color-text-a">real estate agent</span>
             </div>
           </div>
@@ -42,7 +42,9 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="agent-avatar-box">
-                  <img src= "{{asset('img/cameroon-agent-1.jpeg')}}" alt="" class="agent-avatar img-fluid">
+                  {{-- <img src= "{{asset('img/cameroon-agent-1.jpeg')}}" alt="" class="agent-avatar img-fluid"> --}}
+                  <img src= "{{ $agent->ID_CARD_Image}}" alt="" class="agent-avatar img-fluid">
+
                 </div>
               </div>
               <div class="col-md-5 section-md-t3">

@@ -23,6 +23,14 @@
                 <li class="color-a">
                   <span class="color-text-a">Email .</span> +54 356 945234
                 </li>
+                <br>
+                <li class="color-a">
+                  <a href="{{route('create-listing')}}"> <span class="price-a bg-success text-white">Post a listing</span></a>
+                </li>
+                <br>
+                <li>
+                  <a href="{{route('sign-up-agent-form')}}"> <span class="price-a bg-success text-white">Become an Agent</span></a>
+                </li>
               </ul>
             </div>
           </div>

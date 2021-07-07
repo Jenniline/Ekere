@@ -116,7 +116,6 @@
                       </div>
                     </div>
 
-                    
                     <div class="col-md-6 mb-3">
                       <div class="form-group">
                         <div class="row">
@@ -197,7 +196,7 @@
                             <br>
                             <div>
                                 <img src="{{ asset('img/uploadimage.jpg')}}" alt="" width="200px">
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1">                                        
+                                <input type="file" class="form-control-file" id="bedroomimage" name="bedroomimage">                                        
                             </div>
                           
                         </div>
@@ -207,17 +206,17 @@
                               <label for="exampleFormControlFile1">Bathroom Image
                               <div>
                                   <img src="{{ asset('img/uploadimage.jpg')}}" alt="" width="200px">
-                                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                  <input type="file" class="form-control-file" id="bathroomimage" name="bathroomimage">
                               </div>
                           </div>
                       </div>
                       <div class="col-md-3">
                         <div class="form-group">
-                            <label for="exampleFormControlFile1">Parlor Image</label>
+                            <label for="exampleFormControlFile1">Palor Image</label>
                             <br>
                             <div>
                                 <img src="{{ asset('img/uploadimage.jpg')}}" alt="" width="200px">
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1">                                        
+                                <input type="file" class="form-control-file" id="palorimage" name="palorimage">                                        
                             </div>
                           
                         </div>
@@ -228,7 +227,7 @@
                               <br>
                               <div>
                                   <img src="{{ asset('img/uploadimage.jpg')}}" alt="" width="200px">
-                                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                  <input type="file" class="form-control-file" id="kitchenimage" name="kitchenimage">
                               </div>
                           </div>
                       </div> 
