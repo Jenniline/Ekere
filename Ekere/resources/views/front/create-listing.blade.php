@@ -205,7 +205,7 @@
                             <br>
                             <div>
                                 <img src="{{ asset('img/uploadimage.jpg')}}" alt="" width="200px">
-                                <input type="file" class="form-control-file" id="bedroomimage" name="bedroomimage">                                        
+                                <input type="file" class="form-control-file" id="listingimageone" name="listingimageone">                                        
                             </div>
                           
                         </div>
@@ -215,7 +215,7 @@
                               <label for="exampleFormControlFile1">Bathroom Image
                               <div>
                                   <img src="{{ asset('img/uploadimage.jpg')}}" alt="" width="200px">
-                                  <input type="file" class="form-control-file" id="bathroomimage" name="bathroomimage">
+                                  <input type="file" class="form-control-file" id="listingimagetwo" name="listingimagetwo">
                               </div>
                           </div>
                       </div>
@@ -225,7 +225,7 @@
                             <br>
                             <div>
                                 <img src="{{ asset('img/uploadimage.jpg')}}" alt="" width="200px">
-                                <input type="file" class="form-control-file" id="palorimage" name="palorimage">                                        
+                                <input type="file" class="form-control-file" id="listingimagethree" name="listingimagethree">                                        
                             </div>
                           
                         </div>
@@ -236,7 +236,7 @@
                               <br>
                               <div>
                                   <img src="{{ asset('img/uploadimage.jpg')}}" alt="" width="200px">
-                                  <input type="file" class="form-control-file" id="kitchenimage" name="kitchenimage">
+                                  <input type="file" class="form-control-file" id="listingimagefour" name="listingimagefour">
                               </div>
                           </div>
                       </div> 

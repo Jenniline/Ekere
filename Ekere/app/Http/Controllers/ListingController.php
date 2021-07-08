@@ -46,12 +46,12 @@ class ListingController extends Controller
 
       // Image code begins here 
 
-      if($request->hasFile('bedroomimage')) {
-        $bedroomimage = $request->bedroomimage;
-        $path = $request->file('bedroomimage')->store('public/listingImages');
+      if($request->hasFile('listingimageone')) {
+        $listingimageone = $request->listingimageone;
+        $path = $request->file('listingimageone')->store('public/listingImages');
 
         $exploded_string = explode("public", $path);
-        $bedroomimage = asset("storage{$exploded_string[1]}");
+        $listingimageone = asset("storage{$exploded_string[1]}");
         $indexone = $exploded_string[1];
         
         explode("listingImages", $indexone);
@@ -60,7 +60,7 @@ class ListingController extends Controller
         $listingimage->path = "/storage";
         $listingimage->name = $listing->headline." image";
         $listingimage->url = "/storage/listingImages";
-        $listingimage->bedroomimage = $bedroomimage;
+        $listingimage->listingimageone = $listingimageone;
 
         $listingimage->save();
         
