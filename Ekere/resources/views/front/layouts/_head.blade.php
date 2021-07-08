@@ -25,7 +25,12 @@
   
     <!-- Template Main CSS File -->
     <link rel="stylesheet" href=" {{asset('css/style.css')}} ">
-    <link rel="stylesheet" href=" {{asset('css/agent-lifephoto.css')}} ">
+    <link rel="stylesheet" href=" {{asset('css/agent-lifephoto.css')}} "> 
+
+{{-- link to mapbox --}}
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
 
     {{-- JavaScript files --}}
      <!-- =======================================================

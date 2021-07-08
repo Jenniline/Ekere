@@ -1,11 +1,17 @@
-@extends('layouts.app')
+@extends('front.layouts.app')
 
 @section('content')
-<div class="container">
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container p-5 m-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <img src=" {{asset('img/successful-login.png')}} " alt="">
+                <div class="card-header">Go to {{ __('Dashboard') }}  <a href=" {{route('indexonhomepage')}} "> <b> Click here</b> </a></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -15,6 +21,8 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    Go to the application
+                   
                 </div>
             </div>
         </div>

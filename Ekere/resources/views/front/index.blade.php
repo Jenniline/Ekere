@@ -5,7 +5,7 @@
    <!-- ======= Intro Section ======= -->
   <div class="intro intro-carousel">
     <div id="carousel" class="owl-carousel owl-theme">
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/slide-1.jpg')}}) ">
+      <div class="carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/cameroon-house-1.jpeg')}}) ">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -13,15 +13,14 @@
               <div class="row">
                 <div class="col-lg-8">
                   <div class="intro-body">
-                    <p class="intro-title-top">Doral, Florida
-                      <br> 78345
-                    </p>
-                    <h1 class="intro-title mb-4">
-                      <span class="color-b">204 </span> Mount
-                      <br> Olive Road Two
+                    {{-- <p class="intro-title-top">Secure real estate <br> Platform 
+                    </p> --}}
+                    <h1 class="intro-title ">
+                      <span class="color-b"> Secure real estate </span> 
+                      <br> platform 
                     </h1>
                     <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
+                      <a href="#"><span class="price-a">rent | Sale</span></a>
                     </p>
                   </div>
                 </div>
@@ -30,7 +29,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/slide-2.jpg')}})">
+      <div class="carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/naija-house-1.jpeg')}})">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -38,15 +37,15 @@
               <div class="row">
                 <div class="col-lg-8">
                   <div class="intro-body">
-                    <p class="intro-title-top">Doral, Florida
-                      <br> 78345
-                    </p>
+                    {{-- <p class="intro-title-top">Legitimacy is 
+                      <br> prime
+                    </p> --}}
                     <h1 class="intro-title mb-4">
-                      <span class="color-b">204 </span> Rino
-                      <br> Venda Road Five
+                      <span class="color-b"> Agent Legitimacy </span> is
+                      <br> Prime
                     </h1>
                     <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
+                      <a href="#"><span class="price-a">rent | Sale </span></a>
                     </p>
                   </div>
                 </div>
@@ -63,15 +62,15 @@
               <div class="row">
                 <div class="col-lg-8">
                   <div class="intro-body">
-                    <p class="intro-title-top">Doral, Florida
+                    {{-- <p class="intro-title-top">Doral, Florida
                       <br> 78345
-                    </p>
+                    </p> --}}
                     <h1 class="intro-title mb-4">
-                      <span class="color-b">204 </span> Alira
-                      <br> Roan Road One
+                      <span class="color-b">Listing Legitimacy </span> is 
+                      <br> our priority
                     </h1>
                     <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
+                      <a href="#"><span class="price-a">rent | sale </span></a>
                     </p>
                   </div>
                 </div>
@@ -195,19 +194,19 @@
         <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src=" {{asset('img/property-6.jpg')}} " alt="" class="img-a img-fluid">
+              <img src=" {{asset('img/cameroon-interior-1.jpeg')}} " alt="" class="img-a img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="property-single.html">206 Mount
-                      <br /> Olive Road Two</a>
+                    <a href="property-single.html">Buea
+                      <br /> Molyko</a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">rent | $ 12.000</span>
+                    <span class="price-a text-white">rent | CFA 70.000</span>
                   </div>
                   <a href="#" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
@@ -242,19 +241,19 @@
         <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="{{asset('img/property-3.jpg')}} " alt="" class="img-a img-fluid">
+              <img src="{{asset('img/cameroon-interior-2.jpeg')}} " alt="" class="img-a img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="property-single.html">157 West
-                      <br /> Central Park</a>
+                    <a href="property-single.html">Douala
+                      <br /> Bonaberi</a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">rent | $ 12.000</span>
+                    <span class="price-a text-white">rent | CFA 100.000</span>
                   </div>
                   <a href="property-single.html" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
@@ -289,19 +288,19 @@
         <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src=" {{asset('img/property-7.jpg')}} " alt="" class="img-a img-fluid">
+              <img src=" {{asset('img/cameroon-interior-4.jpeg')}} " alt="" class="img-a img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="property-single.html">245 Azabu
-                      <br /> Nishi Park let</a>
+                    <a href="property-single.html"> Limbe
+                      <br /> Bota Land</a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">rent | $ 12.000</span>
+                    <span class="price-a text-white">rent |CFA 200.000</span>
                   </div>
                   <a href="property-single.html" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
@@ -408,14 +407,13 @@
         <div class="col-md-4">
           <div class="card-box-d">
             <div class="card-img-d">
-              <img src=" {{asset('img/agent-4.jpg')}} " alt="" class="img-d img-fluid">
+              <img src=" {{asset('img/jenn-1.jpg')}} " alt="" class="img-d img-fluid">
             </div>
             <div class="card-overlay card-overlay-hover">
               <div class="card-header-d">
                 <div class="card-title-d align-self-center">
                   <h3 class="title-d">
-                    <a href="agent-single.html" class="link-two">Margaret Sotillo
-                      <br> Escala</a>
+                    <a href="agent-single.html" class="link-two">Jenniline Ebai
                   </h3>
                 </div>
               </div>
@@ -469,7 +467,7 @@
         <div class="col-md-4">
           <div class="card-box-d">
             <div class="card-img-d">
-              <img src=" {{asset('img/agent-1.jpg')}} " alt="" class="img-d img-fluid">
+              <img src=" {{asset('img/cameroon-agent-1.jpeg')}} " alt="" class="img-d img-fluid" style="width:500px; height:400px"> 
             </div>
             <div class="card-overlay card-overlay-hover">
               <div class="card-header-d">
@@ -530,14 +528,13 @@
         <div class="col-md-4">
           <div class="card-box-d">
             <div class="card-img-d">
-              <img src=" {{asset('img/agent-5.jpg')}}" alt="" class="img-d img-fluid">
+              <img src=" {{asset('img/cameroon-agent-2.jpeg')}}" alt="" class="img-d img-fluid" style="width:500px; height:400px">
             </div>
             <div class="card-overlay card-overlay-hover">
               <div class="card-header-d">
                 <div class="card-title-d align-self-center">
                   <h3 class="title-d">
-                    <a href="agent-single.html" class="link-two">Emma Toledo
-                      <br> Cascada</a>
+                    <a href="agent-single.html" class="link-two">Brilliant Wirba
                   </h3>
                 </div>
               </div>
@@ -784,7 +781,10 @@
         <div class="col-sm-12">
             <div class="contact-map box">
               <div id="map" class="contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1ses-419!2sve!4v1510329142834" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1ses-419!2sve!4v1510329142834" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> --}}
+
+                <iframe src="https://www.google.com/maps/embed?pb=place/4%C2%B008'53.5%22N+9%C2%B015'44.2%22E/@4.1522284,9.2576103,16.05z/data=!4m14!1m7!3m6!1s0x10613753703e0f21:0x2b03c44599829b53!2sCameroon!3b1!8m2!3d7.369722!4d12.354722!3m5!1s0x1061323a06cb605f:0xfa938b46dc1e59c8!7e2!8m2!3d4.1481949!4d9.2622899?hl=en-GB" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
               </div>
             </div>
           </div>

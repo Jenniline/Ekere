@@ -44,7 +44,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               {{-- <a class="dropdown-item" href="property-single.html">Property Single</a>
               <a class="dropdown-item" href="blog-single.html">Blog Single</a> --}}
-              <a class="dropdown-item" href="{{route('agents-index')}}">Agents Grid</a>
+              <a class="dropdown-item" href="{{route('agents-index')}}">All Agents</a>
               {{-- <a class="dropdown-item" href="{{route('show-agent')}} ">Show Agent</a> --}}
               <a class="dropdown-item" href="{{route('agent-jenn')}} ">Agent Jenn</a>
 

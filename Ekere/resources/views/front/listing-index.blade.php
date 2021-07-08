@@ -249,6 +249,12 @@
               <div class="col-md-6">
                 <h4 class="pt-3"><span class="badge badge-success">For {{$listing->operation}} </span></h4>
               <p>agent's name with link</p>
+
+              {{-- <a href=" {{route('show-listing/$listing->id')}} ">click here</a> --}}
+
+              <p>Agent name: {{$listing->agent_id}} </p>
+
+              {{-- <a href="{{route('show-listing')}} "></a> --}}
               </div>
               <div class="price-box d-flex p-3">
                 <span class="price-a">rent | CFA {{$listing->price}} </span>
@@ -283,15 +289,6 @@
       </div>
       @endforeach
     </div>
-
-    {{-- <div class="col-sm-12">
-      <nav class="pagination-a">
-        <ul class="pagination justify-content-center">
-          {{ $listings->links() }}            
-        </ul>
-      </nav>
-    </div> --}}
-
   </div>
 
 

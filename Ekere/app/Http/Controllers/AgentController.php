@@ -11,10 +11,10 @@ use App\Models\City;
 class AgentController extends Controller
 {
 
-  // public function __construct()
-    // {
-    //     $this->middleware(['auth','verified']);
-    // }
+  public function __construct()
+    {
+        $this->middleware(['auth','verified']);
+    }
   
     public function agentsindex()
     {
@@ -109,11 +109,10 @@ class AgentController extends Controller
     }
 
          // show
-         public function showAgent($id)
-         {
-          $agent=Agent::find($id);
-          return view('front.show-agent')
-                 ->with('agent', $agent);    
-         } 
-  // }
+    public function showAgent($id)
+    {
+    $agent=Agent::find($id);
+    return view('front.show-agent')
+            ->with('agent', $agent);
+    } 
 }

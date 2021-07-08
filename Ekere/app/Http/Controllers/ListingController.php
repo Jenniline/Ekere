@@ -68,6 +68,12 @@ class ListingController extends Controller
       ], 200);
 
     }
+  }
+  public function showListing($id)
+    {
+    $listing=Listing::find($id);
+    return view('front.show-listing')
+            ->with('listing', $listing);  
+    } 
 
-    }
 }
