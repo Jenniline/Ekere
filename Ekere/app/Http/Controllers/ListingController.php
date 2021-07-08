@@ -37,8 +37,8 @@ class ListingController extends Controller
        $listing->price = $request->price; 
        $listing->city_id = $request->city_id; //city_id
       //  Ask Boss about latitude and longitude
-       $listing->latitude = !empty($input['latitude']) ? $input['latitude'] : null;
-       $listing->longitude = !empty($input['longitude']) ? $input['longitude'] : null;
+       $listing->latitude = $request->inputlatitude;
+       $listing->longitude = $request->inputlongitude;
       //  $listing->created_by = $request->user()->id;
        $listing->status = 1;
        $listing->save(); 
@@ -58,6 +58,8 @@ class ListingController extends Controller
         $listingimage = new ListingImage;
         $listingimage->listing_id = $listing->id;
         $listingimage->path = "/storage";
+        $listingimage->name = $listing->headline." image";
+        $listingimage->url = "/storage/listingImages";
         $listingimage->bedroomimage = $bedroomimage;
 
         $listingimage->save();

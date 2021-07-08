@@ -167,34 +167,33 @@
                     </div>
                   </div>
                   
+                  
+                  <p>
+                    Your location is <span id="latitude">0.00</span>°
+                    latitude by <span id="longitude">0.00</span>° longitude.
+                  </p>
+                  <button id="get-location">
+                    Get My Location
+                  </button>
+
+
                   <div class="row">
-
-                    {{-- <div class="col-md-4">
+                    <div class="col-md-6">
                       <label for="inputamenities"> latitude </label>
-                      <input type="number" class="form-control form-control-lg form-control-a" id="latitude" name="latitude"  required>
+                      <input type="number" step=0.000000000000001 class="form-control form-control-lg form-control-a" id="inputlatitude" name="inputlatitude"  required>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <label for="inputamenities"> Longitude </label>
-                      <input type="number" class="form-control form-control-lg form-control-a" id="longitude" name="longitude" required>
-                    </div>  --}}
-                    <p>
-                      Your location is <span id="latitude">0.00</span>°
-                      latitude by <span id="longitude">0.00</span>° longitude.
-                    </p>
-                    <button id="get-location">
-                      Get My Location
-                    </button>
-
-                    
-                  </div>
-                      
-                    <div class="col-md-12 mb-3">
-                      <div class="form-group">
-                        <label for="inputUrl">Enter website</label>
-                        <input type="url" class="form-control form-control-lg form-control-a" id="inputUrl" placeholder="Website">
-                      </div>
+                      <input type="number" step=0.000000000000001 class="form-control form-control-lg form-control-a" id="inputlongitude" name="inputlongitude" required>
+                    </div> 
+                  </div>    
+                  {{-- <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                      <label for="inputUrl">Enter website</label>
+                      <input type="url" class="form-control form-control-lg form-control-a" id="inputUrl" placeholder="Website">
                     </div>
+                  </div> --}}
 
                   <div class="title-box-d pt-3">
                       <h6 class="title-d">Upload Images of the listing here</h6>
