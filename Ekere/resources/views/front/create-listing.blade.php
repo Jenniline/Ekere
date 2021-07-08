@@ -149,9 +149,7 @@
                       </div>
                     </div> 
 
-                  <div class="row">
-
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <div class="form-group">
                         <label for="exampleFormControlSelect1">City</label>
                         <select name="city_id" class="form-control" required>
@@ -167,8 +165,11 @@
                         </select>
                       </div>
                     </div>
+                  </div>
+                  
+                  <div class="row">
 
-                    <div class="col-md-4">
+                    {{-- <div class="col-md-4">
                       <label for="inputamenities"> latitude </label>
                       <input type="number" class="form-control form-control-lg form-control-a" id="latitude" name="latitude"  required>
                     </div>
@@ -176,15 +177,24 @@
                     <div class="col-md-4">
                       <label for="inputamenities"> Longitude </label>
                       <input type="number" class="form-control form-control-lg form-control-a" id="longitude" name="longitude" required>
-                    </div> 
+                    </div>  --}}
+                    <p>
+                      Your location is <span id="latitude">0.00</span>°
+                      latitude by <span id="longitude">0.00</span>° longitude.
+                    </p>
+                    <button id="get-location">
+                      Get My Location
+                    </button>
+
+                    
                   </div>
                       
-                    {{-- <div class="col-md-12 mb-3">
+                    <div class="col-md-12 mb-3">
                       <div class="form-group">
                         <label for="inputUrl">Enter website</label>
                         <input type="url" class="form-control form-control-lg form-control-a" id="inputUrl" placeholder="Website">
                       </div>
-                    </div> --}}
+                    </div>
 
                   <div class="title-box-d pt-3">
                       <h6 class="title-d">Upload Images of the listing here</h6>
