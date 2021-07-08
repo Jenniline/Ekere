@@ -170,12 +170,12 @@
 
                     <div class="col-md-4">
                       <label for="inputamenities"> latitude </label>
-                      <input type="number" class="form-control form-control-lg form-control-a" id="inputLongitude" name="latitude"  required>
+                      <input type="number" class="form-control form-control-lg form-control-a" id="latitude" name="latitude"  required>
                     </div>
 
                     <div class="col-md-4">
                       <label for="inputamenities"> Longitude </label>
-                      <input type="number" class="form-control form-control-lg form-control-a" id="inputLatitude" name="longitude" required>
+                      <input type="number" class="form-control form-control-lg form-control-a" id="longitude" name="longitude" required>
                     </div> 
                   </div>
                       

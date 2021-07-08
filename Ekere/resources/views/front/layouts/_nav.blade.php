@@ -6,6 +6,9 @@
         <span></span>
         <span></span>
       </button>
+      <a class="navbar-brand" href="{{ url('/') }}">
+        {{-- {{ config('app.name', 'Laravel') }} --}}
+      </a>
       <a class="navbar-brand text-brand" href="index.html">Safe<span class="color-b">Housing</span></a>
       <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
         <span class="fa fa-search" aria-hidden="true"></span>
@@ -35,7 +38,37 @@
 
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="blog-grid.html">Blog</a>
+            <ul class="navbar-nav ml-auto">
+              <!-- Authentication Links -->
+              @guest
+                  <li class="nav-item">
+                      <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                  </li>
+                  @if (Route::has('register'))
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                      </li>
+                  @endif
+              @else
+                  <li class="nav-item dropdown">
+                      <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                          {{ Auth::user()->name }}
+                      </a>
+
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="{{ route('logout') }}"
+                             onclick="event.preventDefault();
+                                           document.getElementById('logout-form').submit();">
+                              {{ __('Logout') }}
+                          </a>
+
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                              @csrf
+                          </form>
+                      </div>
+                  </li>
+              @endguest
+          </ul>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -55,16 +88,13 @@
           </li>
         </ul>
       </div>
-     
-      <div class="price-box d-flex-end">
-        {{-- <a href="{{route('agent-rules-modal')}}"> <span class="price-a bg-success">Become an Agent</span></a> --}}
-        <a href="{{route('sign-up-agent-form')}}"> <span class="price-a bg-success text-white">Become an Agent</span></a>
-      </div>
-      
-     
     </div>
+  <div class="price-box d-flex-end">
+    {{-- <a href="{{route('agent-rules-modal')}}"> <span class="price-a bg-success">Become an Agent</span></a> --}}
+    <a href="{{route('sign-up-agent-form')}}"> <span class="price-a bg-success text-white">Become an Agent</span></a>
+  </div>
+  <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
+    <span class="fa fa-search" aria-hidden="true"></span>
+  </button>
 
-    <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
-      <span class="fa fa-search" aria-hidden="true"></span>
-    </button>
   </nav><!-- End Header/Navbar -->
