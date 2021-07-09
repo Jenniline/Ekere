@@ -611,22 +611,22 @@
         <div class="carousel-item-c">
           <div class="card-box-b card-shadow news-box">
             <div class="img-box-b">
-              <img src="{{asset('img/post-2.jpg ')}} " alt="" class="img-b img-fluid">
+              <img src="{{asset('img/cameroon-house-1.jpeg')}} " alt="" class="img-b img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-header-b">
                 <div class="card-category-b">
-                  <a href="#" class="category-b">House</a>
+                  <a href="#" class="category-b">Apartment</a>
                 </div>
                 <div class="card-title-b">
                   <h2 class="title-2">
-                    <a href="blog-single.html">House is comming
-                      <br> new</a>
+                    <a href="blog-single.html">Apartment is Buea
+                      <br> verified </a>
                   </h2>
                 </div>
-                <div class="card-date">
+                {{-- <div class="card-date">
                   <span class="date-b">18 Sep. 2017</span>
-                </div>
+                </div> --}}
               </div>
             </div>
           </div>
@@ -634,22 +634,22 @@
         <div class="carousel-item-c">
           <div class="card-box-b card-shadow news-box">
             <div class="img-box-b">
-              <img src=" {{asset('img/post-5.jpg ')}}" alt="" class="img-b img-fluid">
+              <img src=" {{asset('img/cameroon-house-2.jpeg')}}" alt="" class="img-b img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-header-b">
                 <div class="card-category-b">
-                  <a href="#" class="category-b">Travel</a>
+                  <a href="#" class="category-b">Guest House</a>
                 </div>
                 <div class="card-title-b">
                   <h2 class="title-2">
-                    <a href="blog-single.html">Travel is comming
-                      <br> new</a>
+                    <a href="blog-single.html">Guest House in Bonaberi
+                      <br> verified</a>
                   </h2>
                 </div>
-                <div class="card-date">
+                {{-- <div class="card-date">
                   <span class="date-b">18 Sep. 2017</span>
-                </div>
+                </div> --}}
               </div>
             </div>
           </div>
@@ -657,22 +657,22 @@
         <div class="carousel-item-c">
           <div class="card-box-b card-shadow news-box">
             <div class="img-box-b">
-              <img src=" {{asset('img/post-7.jpg ')}}" alt="" class="img-b img-fluid">
+              <img src=" {{asset('img/cameroon-interior-4.jpeg')}}" alt="" class="img-b img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-header-b">
                 <div class="card-category-b">
-                  <a href="#" class="category-b">Park</a>
+                  <a href="#" class="category-b">Studio</a>
                 </div>
                 <div class="card-title-b">
                   <h2 class="title-2">
-                    <a href="blog-single.html">Park is comming
-                      <br> new</a>
+                    <a href="blog-single.html">Studio in Limbe
+                      <br> verified </a>
                   </h2>
                 </div>
-                <div class="card-date">
+                {{-- <div class="card-date">
                   <span class="date-b">18 Sep. 2017</span>
-                </div>
+                </div> --}}
               </div>
             </div>
           </div>
@@ -723,7 +723,7 @@
             <div class="row">
               <div class="col-sm-12 col-md-6">
                 <div class="testimonial-img">
-                  <img src=" {{asset('img/testimonial-1.jpg')}} " alt="" class="img-fluid">
+                  <img src=" {{asset('img/cameroonian-girl-2.png')}} " alt="" class="img-fluid">
                 </div>
               </div>
               <div class="col-sm-12 col-md-6">
@@ -732,14 +732,13 @@
                 </div>
                 <div class="testimonials-content">
                   <p class="testimonial-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                    debitis hic ber quibusdam
-                    voluptatibus officia expedita corpori.
+                   I am a satisfied client, I the like the security on the platform. The listings i got were legitimate and the agent was legitimate as well 
+                  I got my new home
                   </p>
                 </div>
                 <div class="testimonial-author-box">
-                  <img src="  {{asset('img/mini-testimonial-1.jpg')}}" alt="" class="testimonial-avatar">
-                  <h5 class="testimonial-author">Albert & Erika</h5>
+                  <img src="  {{asset('img/cameroonian-girl-2.png')}}" alt="" class="testimonial-avatar">
+                  <h5 class="testimonial-author">Elixir Ewoko</h5>
                 </div>
               </div>
             </div>
@@ -750,7 +749,7 @@
             <div class="row">
               <div class="col-sm-12 col-md-6">
                 <div class="testimonial-img">
-                  <img src="{{asset('img/testimonial-2.jpg')}} " alt="" class="img-fluid">
+                  <img src="{{asset('img/cameroonian-girl-1.jpeg')}} " alt="" class="img-fluid">
                 </div>
               </div>
               <div class="col-sm-12 col-md-6">
@@ -759,14 +758,13 @@
                 </div>
                 <div class="testimonials-content">
                   <p class="testimonial-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                    debitis hic ber quibusdam
-                    voluptatibus officia expedita corpori.
+                    I am a satisfied client, I the like the security on the platform. The listings i got were legitimate and the agent was legitimate as well 
+                    I got my new office space
                   </p>
                 </div>
                 <div class="testimonial-author-box">
-                  <img src=" {{asset('img/mini-testimonial-2.jpg')}} " alt="" class="testimonial-avatar">
-                  <h5 class="testimonial-author">Pablo & Emma</h5>
+                  <img src=" {{asset('img/cameroonian-girl-1.jpeg')}} " alt="" class="testimonial-avatar">
+                  <h5 class="testimonial-author"> Emma Mukwele </h5>
                 </div>
               </div>
             </div>
