@@ -91,80 +91,81 @@
           <div class="title-wrap d-flex justify-content-between">
             <div class="title-box">
               <h2 class="title-a">Features of the platform</h2>
+              <h2 class="title-a pl-3">Security measures put in place</h2>
+
             </div>
           </div>
         </div>
       </div>
       <div class="row">
+
         <div class="col-md-4">
           <div class="card-box-c foo">
             <div class="card-header-c d-flex">
               <div class="card-box-ico">
-                <span class="fa fa-gamepad"></span>
+                {{-- <span class="fa fa-usd"></span> --}}
               </div>
               <div class="card-title-c align-self-center">
-                <h2 class="title-c">Lifestyle</h2>
+                <h2 class="title-c">Sign up and verify email</h2>
               </div>
             </div>
             <div class="card-body-c">
               <p class="content-c">
-                Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                convallis a pellentesque
-                nec, egestas non nisi.
+               All user's of the platform must sign-up and verify their email in order to access the platform.
               </p>
             </div>
             <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Read more
+              {{-- <a href="#" class="link-c link-icon">Read more
                 <span class="ion-ios-arrow-forward"></span>
-              </a>
+              </a> --}}
             </div>
           </div>
         </div>
+
         <div class="col-md-4">
           <div class="card-box-c foo">
             <div class="card-header-c d-flex">
               <div class="card-box-ico">
-                <span class="fa fa-usd"></span>
+                {{-- <span class="fa fa-gamepad"></span> --}}
+                {{-- <h2 class="title-c">Verified agents only </h2> --}}
+                {{-- <span class="fas fa-user-check"></span> --}}
               </div>
               <div class="card-title-c align-self-center">
-                <h2 class="title-c">Loans</h2>
+                <h2 class="title-c">Verify agents </h2>
               </div>
             </div>
             <div class="card-body-c">
               <p class="content-c">
-                Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Mauris blandit
-                aliquet elit, eget tincidunt
-                nibh pulvinar a.
+               Here agents are verified before being able to create listings and reach out to clients.
               </p>
             </div>
             <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Read more
+              {{-- <a href="#" class="link-c link-icon">Read more
                 <span class="ion-ios-arrow-forward"></span>
-              </a>
+              </a> --}}
             </div>
           </div>
         </div>
+        
         <div class="col-md-4">
           <div class="card-box-c foo">
             <div class="card-header-c d-flex">
               <div class="card-box-ico">
-                <span class="fa fa-home"></span>
+                {{-- <span class="fa fa-home"></span> --}}
               </div>
               <div class="card-title-c align-self-center">
-                <h2 class="title-c">Sell</h2>
+                <h2 class="title-c">Verify listings</h2>
               </div>
             </div>
             <div class="card-body-c">
               <p class="content-c">
-                Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                convallis a pellentesque
-                nec, egestas non nisi.
+                All listings are verified automatically before being published
               </p>
             </div>
             <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Read more
+              {{-- <a href="#" class="link-c link-icon">Read more
                 <span class="ion-ios-arrow-forward"></span>
-              </a>
+              </a> --}}
             </div>
           </div>
         </div>
