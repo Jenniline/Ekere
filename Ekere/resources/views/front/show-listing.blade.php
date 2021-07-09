@@ -101,13 +101,17 @@
             </div>
           </div>
         </div>
+        <div class="price-box d-flex p-3">
+          <span class="price-a">Created At {{$listing->created_at}} </span>
+        </div>
+        <div class="price-box d-flex p-3">
+          <span class="price-a">Updated At {{$listing->updated_at}} </span>
+        </div>
         
       </div>
       <div class="col-md-8 border">
-        <p>map will be here</p>
 
-
-<div id='map' style='width: 1000px; height: 300px;'></div>
+<div id='map' style='width: 700px; height: 600px;'></div>
 <script>
 // TO MAKE THE MAP APPEAR YOU MUST
 // ADD YOUR ACCESS TOKEN FROM
