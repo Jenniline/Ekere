@@ -23,7 +23,7 @@
                       <br> before publishing
                     </h1>
                     <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
+                      <a href="#"><span class="price-a">rent | Sale</span></a>
                     </p>
                   </div>
                 </div>
@@ -49,7 +49,7 @@
                       <span class="color-b">With our Machine </span>   learning Algorithm 
                     </h1>
                     <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
+                      <a href="#"><span class="price-a">rent | Sale</span></a>
                     </p>
                   </div>
                 </div>
@@ -74,7 +74,7 @@
                       {{-- <br> Roan Road One --}}
                     </h1>
                     <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
+                      <a href="#"><span class="price-a">rent | Sale</span></a>
                     </p>
                   </div>
                 </div>

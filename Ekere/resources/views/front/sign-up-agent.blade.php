@@ -24,7 +24,7 @@
                       <br> to become an Agent
                     </h1>
                     <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
+                      <a href="#"><span class="price-a">rent | Sale</span></a>
                     </p>
                   </div>
                 </div>
@@ -50,7 +50,7 @@
                       <span class="color-b">With our Machine </span>   learning Algorithm 
                     </h1>
                     <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
+                      <a href="#"><span class="price-a">rent | Sale</span></a>
                     </p>
                   </div>
                 </div>
@@ -59,7 +59,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image:  url({{ asset('img/slide-3.jpg')}})">
+      <div class="carousel-item-a intro-item bg-image" style="background-image:  url({{ asset('img/cameroon-house-18.jpg')}})">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -75,7 +75,7 @@
                       {{-- <br> Roan Road One --}}
                     </h1>
                     <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
+                      <a href="#"><span class="price-a">rent | Sale</span></a>
                     </p>
                   </div>
                 </div>

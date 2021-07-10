@@ -91,8 +91,6 @@
           <div class="title-wrap d-flex justify-content-between">
             <div class="title-box">
               <h2 class="title-a">Features of the platform</h2>
-              <h2 class="title-a pl-3">Security measures put in place</h2>
-
             </div>
           </div>
         </div>
