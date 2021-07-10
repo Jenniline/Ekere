@@ -635,7 +635,7 @@
         <div class="carousel-item-c">
           <div class="card-box-b card-shadow news-box">
             <div class="img-box-b">
-              <img src=" {{asset('img/cameroon-house-2.jpeg')}}" alt="" class="img-b img-fluid">
+              <img src=" {{asset('img/cameroon-house-11.jpeg')}}" alt="" class="img-b img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-header-b">
