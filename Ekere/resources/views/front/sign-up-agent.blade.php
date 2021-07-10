@@ -8,7 +8,7 @@
    <!-- ======= Intro Section ======= -->
   <div class="intro intro-carousel">
     <div id="carousel" class="owl-carousel owl-theme">
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/slide-1.jpg')}}) ">
+      <div class="carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/cameroon-house-7.jpeg')}}) ">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -33,7 +33,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/slide-2.jpg')}})">
+      <div class="carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/cameroon-house-12.jpg')}})">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -279,7 +279,7 @@
                                   </div> 
                                 </div>
                             </div> 
-                             <div class="col-md-6">
+                              <div class="col-md-6">
                                 <div class="form-group">
                                   <label for="exampleFormControlFile1"><h3> Take an instant photo with Camera </h3> </label>
                                   
@@ -297,7 +297,7 @@
                                   </div>
 
                                 </div>
-                            </div> 
+                              </div> 
 
 
                             <div class="col-md-12 mb-3">

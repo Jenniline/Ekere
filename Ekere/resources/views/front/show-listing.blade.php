@@ -126,7 +126,7 @@ var map = new mapboxgl.Map({
     zoom: 12 // starting zoom
 });
 // Create a default Marker and add it to the map.
-    var marker1 = new mapboxgl.Marker()
+    var marker1 = new mapboxgl.Marker() 
     .setLngLat([coordLongitude, coordLatitude])
     .addTo(map);
     

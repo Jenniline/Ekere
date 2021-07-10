@@ -5,7 +5,7 @@
    <!-- ======= Intro Section ======= -->
   <div class="intro intro-carousel">
     <div id="carousel" class="owl-carousel owl-theme">
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/cameroon-house-1.jpeg')}}) ">
+      <div class="carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/cameroon-house-12.jpg')}}) ">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -29,7 +29,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/naija-house-1.jpeg')}})">
+      <div class="carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/cameroon-house-13.jpeg')}})">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -54,7 +54,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image:  url({{ asset('img/slide-3.jpg')}})">
+      <div class="carousel-item-a intro-item bg-image" style="background-image:  url({{ asset('img/cameroon-house-15.jpg')}})">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">

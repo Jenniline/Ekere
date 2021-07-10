@@ -7,7 +7,7 @@
    <!-- ======= Intro Section ======= -->
    <div class="intro intro-carousel">
     <div id="carousel" class="owl-carousel owl-theme">
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/slide-1.jpg')}}) ">
+      <div class="carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/cameroon-house-15.jpg')}}) ">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/slide-2.jpg')}})">
+      <div class="carousel-item-a intro-item bg-image" style="background-image: url({{ asset('img/cameroon-house-10.jpeg')}})">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -58,7 +58,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image:  url({{ asset('img/slide-3.jpg')}})">
+      <div class="carousel-item-a intro-item bg-image" style="background-image:  url({{ asset('img/cameroon-house-17.jpg')}})">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -197,8 +197,26 @@
 
                   <div class="title-box-d pt-3">
                       <h6 class="title-d">Upload Images of the listing here</h6>
-                    </div>
                     <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="exampleFormControlFile1"><h3> Take instant images with camera </h3> </label>
+                          <div class="contentarea">
+                            <div class="camera">
+                                <video id="video">Video stream not available.</video>
+                            </div>
+                            <div><button id="startbutton">Take photo</button></div>
+                            <canvas id="canvas"></canvas>
+                            <div class="output">
+                                <img id="photo" type="file" alt="The screen capture will appear in this box.">
+                                <input type="file" id="lifephoto" name="lifephoto" hidden>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {{-- <div class="row">
                       <div class="col-md-3">
                         <div class="form-group">
                             <label for="exampleFormControlFile1">Bedroom Image</label>
@@ -240,7 +258,7 @@
                               </div>
                           </div>
                       </div> 
-                    </div>  
+                    </div>   --}}
                     <div class="col-md-12">
                       <button type="submit" class="btn btn-a btn-lg btn-block">submit</button>
                     </div>
