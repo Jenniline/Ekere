@@ -113,6 +113,8 @@
 
 <div id='map' style='width: 700px; height: 600px;'></div>
 <script>
+  var coordLatitude = {!! $listing->latitude !!}
+  var coordLongitude = {!! $listing->longitude !!}
 // TO MAKE THE MAP APPEAR YOU MUST
 // ADD YOUR ACCESS TOKEN FROM
 // https://account.mapbox.com
@@ -120,12 +122,12 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmVubmRpcCIsImEiOiJjazRtdHVqcmgyZGo0M21xd3ZyM
 var map = new mapboxgl.Map({
     container: 'map', // container ID
     style: 'mapbox://styles/mapbox/streets-v11', // style URL
-    center:  [12.550343, 55.665957], // starting position [lng, lat]
-    zoom: 9 // starting zoom
+    center:  [coordLongitude, coordLatitude], // starting position [lng, lat]
+    zoom: 12 // starting zoom
 });
 // Create a default Marker and add it to the map.
     var marker1 = new mapboxgl.Marker()
-    .setLngLat([12.554729, 55.70651])
+    .setLngLat([coordLongitude, coordLatitude])
     .addTo(map);
     
     // Add geolocate control to the map.

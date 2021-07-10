@@ -62,6 +62,8 @@
                             <p>
                               <strong>City: </strong> Buea
                             </p>
+                            <a class="" href="{{route('show-agent', $agent->id)}}"  role="button">View details</a>
+
                           </div>
                         </div>
                         <div class="card-footer-d">

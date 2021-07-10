@@ -250,7 +250,9 @@
                 <h4 class="pt-3"><span class="badge badge-success">For {{$listing->operation}} </span></h4>
               <p>agent's name with link</p>
 
-              {{-- <a href=" {{route('show-listing/$listing->id')}} ">click here</a> --}}
+              {{-- <a href=" {{route('show-listing/{{$listing->id}}')}} ">click here</a> --}}
+              <a  class="" href="{{route('show-listing', $listing->id)}}"  role="button">View details</a>
+
 
               <p>Agent name: {{$listing->agent_id}} </p>
 

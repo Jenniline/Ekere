@@ -32,7 +32,6 @@
 
               <a class="dropdown-item" href="{{route('listings-index')}}">All Listings</a>
               <a class="dropdown-item" href=" {{route('create-listing')}} ">Create a listing</a>
-              {{-- <a class="dropdown-item bg-success text-white" href="{{route('create-a-listing')}}">Create Listing</a> --}}
               
             </div>
 
