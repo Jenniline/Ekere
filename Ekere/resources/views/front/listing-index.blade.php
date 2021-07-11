@@ -61,8 +61,19 @@
           <div class="img-box-a">
             {{-- <img src= " {{asset('img/property-10.jpg')}}" alt="" class="img-a img-fluid"> --}}
             <img src=" {{ $listing->image }}" alt="" class="img-a img-fluid" style="width:500px">
-            <h4 class="pt-3"><span class="badge badge-success">verified</span></h4>
           </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h4 class="pt-3"><span class="badge badge-success">verified</span></h4>
+            </div>
+            <div class="col-md-6">
+              <div class="price-box">
+                {{-- <a href="{{route('agent-rules-modal')}}"> <span class="price-a bg-success">Become an Agent</span></a> --}}
+                <a href="{{route('interested-client', $listing->id)}} "> <span class="price-a bg-success text-white"> interested </span></a>
+              </div>
+            </div>
+          </div>
+          
     
           <div class="card-body">
             <div class="row">
@@ -70,6 +81,9 @@
                 <h5 class="card-title"> {{$listing->headline}} </h5>
                 <p> City | <u class="text-dark"> {{$listing->city_id}} </u></p>
                 <p class="card-text"> {{$listing->description}} </p>
+                {{-- <div class="price-box d-flex p-3">
+                  <span class="price-a">I am <br> interested </span>
+                </div> --}}
               </div> 
               <div class="col-md-6">
                 <h4 class="pt-3"><span class="badge badge-success">For {{$listing->operation}} </span></h4>

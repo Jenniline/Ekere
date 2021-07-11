@@ -86,6 +86,8 @@ Route::group(['prefix' => '/Ekere', 'as' => ''], function () {
     Route::get('create-listing', 'ListingController@createlisting')->name('create-listing');
     Route::post('store-listing', 'ListingController@storeListing')->name('store-listing');
     Route::get('show-listing/{listing}', 'ListingController@showListing')->name('show-listing');
+    Route::get('interested-client/{listing}', 'ListingController@interestedClient')->name('interested-client');
+
 
     
 });

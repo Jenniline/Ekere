@@ -165,6 +165,27 @@
                         </select>
                       </div>
                     </div>
+
+                    {{-- <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect1">Agent</label>
+                        <select name="agent_id" class="form-control" required>
+                          <option value="">Select Agent name</option>
+                          @foreach ($agents as $agent)
+                            <option value="{{$agent->id}}"> {{$agent->name}} </option> <br>
+                          @endforeach
+                          @if ($errors->has('agent_id'))
+                          <span class="help-block">
+                            <strong>{{ $errors->first('agent_id') }}</strong>
+                          </span>
+                         @endif
+                        </select>
+                      </div>
+                    </div> --}}
+
+                    
+
+                    
                   </div>
                   
                   

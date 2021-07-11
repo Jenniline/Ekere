@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\Listing;
 use App\Models\ListingImage;
 use App\Models\City;
+use App\Models\Agent;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ListingCreatedMail;
+use App\Mail\InterestedClientMail;
 
 
 class ListingController extends Controller
@@ -13,15 +17,22 @@ class ListingController extends Controller
     public function listingsindex()
     {
       $listings = Listing::paginate(12);
+      $agents = Agent::all();
       // $listingImage = []
       // $listings = Listing::all();
       return view('front.listing-index')
-            ->with('listings', $listings);    }
+            ->with('listings', $listings)
+            ->with( 'agents',$agents);
+          
+    }
     
     public function createlisting()
     {
       $cities = City::all();
-      return view('front.create-listing')->with('cities',$cities);
+      $agents = Agent::all();
+      return view('front.create-listing')
+            ->with('cities',$cities)
+            ->with( 'agents',$agents);
     }
 
     public function storeListing(Request $request)
@@ -35,6 +46,8 @@ class ListingController extends Controller
         $listing->kitchen = $request->kitchen; 
         $listing->price = $request->price; 
         $listing->city_id = $request->city_id; //city_id
+        $listing->agent_id = auth()->user()->id;
+
        //  Ask Boss about latitude and longitude
         $listing->latitude = $request->inputlatitude;
         $listing->longitude = $request->inputlongitude;
@@ -48,7 +61,10 @@ class ListingController extends Controller
        $listing->image = asset("storage".$exploded_string[1]);
        $listing->save();
 
-      
+       if (auth()->user()->email) {
+        Mail::to(auth()->user()->email)->send(new ListingCreatedMail($listing));
+       }
+  
       //  return response()->json([
       //   "success"=>true,
       //   "message"=> "Listing stored successfully"
@@ -92,6 +108,19 @@ class ListingController extends Controller
     $listing=Listing::find($id);
     return view('front.show-listing')
             ->with('listing', $listing);  
-    } 
+  } 
+
+  public function interestedClient($id)
+  {
+    $client = auth()->user()->name;
+    $listing=Listing::find($id);
+
+    if (auth()->user()->email) {
+      Mail::to(auth()->user()->email)->send(new InterestedClientMail($listing));
+     }
+    return view('front.interested_client_request')
+                  ->with('listing', $listing);  
+    
+  }
 
 }
