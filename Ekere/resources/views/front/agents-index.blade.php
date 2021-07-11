@@ -31,79 +31,85 @@
   </main>   
     {{-- Pulled from Database --}}
 
-            
-            <div class="container">
-                <div class="row">
-                  @foreach($agents as $agent)
-                  <div class="col-md-4">
-                    <div class="card-box-d">
-                      <div class="card-img-d">
-                        <img src=" {{asset('img/agent-4.jpg')}} " alt="" class="img-d img-fluid">
-                      </div>
-                      <div class="card-overlay card-overlay-hover">
-                        <div class="card-header-d">
-                          <div class="card-title-d align-self-center">
-                            <h3 class="title-d">
-                              <a href="#" class="link-two"> {{$agent->name}}</a>
-                            </h3>
-                          </div>
-                        </div>
-                        <div class="card-body-d">
-                          <p class="content-d color-text-a">
-                            {{$agent->about}}
-                          </p>
-                          <div class="info-agents color-a">
-                            <p>
-                              <strong>Phone: </strong> {{$agent->phone_number}}
-                            </p>
-                            <p>
-                              <strong>Email: </strong> {{$agent->email}}
-                            </p>
-                            <p>
-                              <strong>City: </strong> Buea
-                            </p>
-                            <a class="" href="{{route('show-agent', $agent->id)}}"  role="button">View details</a>
+    <div class="container">
+      <div class="row">      
+        @foreach($agents as $agent)
+        <div class="col-md-4">
+          <div class="card-box-a border">
+            <div class="img-box-a">
+              {{-- <img src= " {{asset('img/property-10.jpg')}}" alt="" class="img-a img-fluid"> --}}
+              <img src=" {{ $agent->image }}" alt="" class="img-a img-fluid" width="500px" height="500px">
+              <h4 class="pt-3"><span class="badge badge-success">verified</span></h4>
+            </div>
+      
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6 border-right">
+                  <h5 class="card-title"> {{$agent->name}} </h5>
+               ID   <h5 class="card-title"> {{$agent->id}} </h5>
 
-                          </div>
-                        </div>
-                        <div class="card-footer-d">
-                          <div class="socials-footer d-flex justify-content-center">
-                            <ul class="list-inline">
-                              <li class="list-inline-item">
-                                <a href="#" class="link-one">
-                                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                              </li>
-                              <li class="list-inline-item">
-                                <a href="#" class="link-one">
-                                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                              </li>
-                              <li class="list-inline-item">
-                                <a href="#" class="link-one">
-                                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </a>
-                              </li>
-                              <li class="list-inline-item">
-                                <a href="#" class="link-one">
-                                  <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                                </a>
-                              </li>
-                              <li class="list-inline-item">
-                                <a href="#" class="link-one">
-                                  <i class="fa fa-dribbble" aria-hidden="true"></i>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <p> City | <u class="text-dark"> {{$agent->city_id}} </u></p>
+                  <p class="card-text"> {{$agent->email}} </p>
+                </div> 
+
+                <div class="col-md-6">
+                  <p>phone number</p>
+
+                  <div class="price-box d-flex">
+                    <span class="price-a"> +237 {{$agent->phone_number}} </span>
                   </div>
-                    
-              @endforeach
-            </div>     
+                </div>
+              </div>
+              {{-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+              <div class="icon-box-content table-cell">
+                <div class="icon-box-title">
+                  <h4 class="icon-title">Social networks</h4>
+                </div>
+                <div class="icon-box-content">
+                  <div class="socials-footer">
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a href="#" class="link-one">
+                          <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="link-one">
+                          <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="link-one">
+                          <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="link-one">
+                          <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="link-one">
+                          <i class="fa fa-dribbble" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
           </div>
+        </div>
+        @endforeach
+      </div>
+    </div>
+
+    
+  
+
+            
+            
           
           <div class="container pt-5">
             <div class="row">
