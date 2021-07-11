@@ -62,9 +62,9 @@
               </div>
               {{-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
               <div class="icon-box-content table-cell">
-                <div class="icon-box-title">
+                {{-- <div class="icon-box-title">
                   <h4 class="icon-title">Social networks</h4>
-                </div>
+                </div> --}}
                 <div class="icon-box-content">
                   <div class="socials-footer">
                     <ul class="list-inline">
@@ -95,6 +95,13 @@
                       </li>
                     </ul>
                   </div>
+                </div>
+                <div class="row">
+                  <i id="icons" class="fa fa-star"></i>
+                  <i id="icons" class="fa fa-star"></i>
+                  <i id="icons" class="fa fa-star"></i>
+                  <i id="icons" class="fa fa-star"></i>
+                  <i id="icons" class="fa fa-star"></i>
                 </div>
               </div>
             </div>
