@@ -43,7 +43,7 @@
               <div class="col-md-6">
                 <div class="agent-avatar-box">
                   {{-- <img src= "{{asset('img/cameroon-agent-1.jpeg')}}" alt="" class="agent-avatar img-fluid"> --}}
-                  <img src= "{{ $agent->ID_CARD_Image}}" alt="" class="agent-avatar img-fluid">
+                  <img src= "{{ $agent->image}}" alt="" class="agent-avatar img-fluid" width="500px" height="500px">
 
                 </div>
               </div>
@@ -94,7 +94,7 @@
                       <p>
                         <strong>Account Approved On the: </strong> 
                         <span class="color-text-a"> {{$agent->updated_at}}  </span>
-                        Must be after 3 days
+                       
                       </p>
                       <i class="fa fa-times"></i>
                      

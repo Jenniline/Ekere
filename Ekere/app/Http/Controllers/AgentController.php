@@ -68,44 +68,35 @@ class AgentController extends Controller
       $agent->type = $request->type_of_agent;
       $agent->gender = $request->gender;
       $agent->city_id = $request->city_id;
+
+      $input =  $request->file();
+      $images = $input['image'];
+      $path = $request->file('image')->store('public/agentImages');
+      $exploded_string = explode("public",$path);
+      $agent->image = asset("storage".$exploded_string[1]);
       $agent->save();
 
-      if($request->hasFile('idimage')) {
-        $idimage = $request->idimage;
-        // $lifephoto = $request->lifephoto;
+      // if($request->hasFile('idimage')) {
+      //   $idimage = $request->idimage;
+      //   $path = $request->file('idimage')->store('public/agentImages');
+      //   $exploded_string = explode("public", $path);
+      //   $ID_CARD_Image = asset("storage{$exploded_string[1]}");
+      //   $indexone = $exploded_string[1];
 
-        // $images = $input['images'];
-        // $image_details = array();
-        $path = $request->file('idimage')->store('public/agentImages');
+      //   explode("agentImages", $indexone);
+      //   $agentimage = new AgentImage;
+      //   $agentimage->agent_id = $agent->id;
+      //   $agentimage->path = "/storage";
+      //   $agentimage->ID_CARD_Image = $ID_CARD_Image;
+      //   $agentimage->save();
+      // }   
 
-        $exploded_string = explode("public", $path);
-        // $exploded_string = explode("agentImages", $path);
 
-        // dd($exploded_string);
-
-        // $ID_CARD_Image = asset("storage/{$exploded_string[0]}/{$exploded_string[1]}");
-        $ID_CARD_Image = asset("storage{$exploded_string[1]}");
-        $indexone = $exploded_string[1];
-
-        explode("agentImages", $indexone);
-        $agentimage = new AgentImage;
-        $agentimage->agent_id = $agent->id;
-        $agentimage->path = "/storage";
-        $agentimage->ID_CARD_Image = $ID_CARD_Image;
-        // $agentimage->ID_CARD_Image = $lifephoto;
-
-        $agentimage->save();
-                
-        return response()->json([
-            "success"=>true,
-            "message"=> "Agent stored successfully"
-        ], 200);
-        
-      }     
-
-      //  now get the ID image and get life photo image
-      // return view('front.agent_success');
-        // return $agent;
+      
+      return response()->json([
+        "success"=>true,
+        "message"=> "Agent stored successfully"
+    ], 200);
     }
 
          // show

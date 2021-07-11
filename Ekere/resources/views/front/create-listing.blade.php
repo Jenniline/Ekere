@@ -216,18 +216,18 @@
                       </div>
                     </div>
                     
-                    {{-- <div class="row">
+                     <div class="row">
                       <div class="col-md-3">
                         <div class="form-group">
                             <label for="exampleFormControlFile1">Bedroom Image</label>
                             <br>
                             <div>
-                                <img src="{{ asset('img/uploadimage.jpg')}}" alt="" width="200px">
-                                <input type="file" class="form-control-file" id="listingimageone" name="listingimageone">                                        
+                                <img src="{{asset('img/uploadimage.jpg') }}" alt="" width="200px">
+                                <input type="file" class="form-control-file" id="image" name="image">                                        
                             </div>
-                          
                         </div>
                       </div>
+                    {{--
                       <div class="col-md-3">
                           <div class="form-group">
                               <label for="exampleFormControlFile1">Bathroom Image

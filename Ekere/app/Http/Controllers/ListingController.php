@@ -13,10 +13,10 @@ class ListingController extends Controller
     public function listingsindex()
     {
       $listings = Listing::paginate(12);
+      // $listingImage = []
       // $listings = Listing::all();
       return view('front.listing-index')
-            ->with('listings', $listings);
-    }
+            ->with('listings', $listings);    }
     
     public function createlisting()
     {
@@ -40,36 +40,43 @@ class ListingController extends Controller
        $listing->latitude = $request->inputlatitude;
        $listing->longitude = $request->inputlongitude;
       //  $listing->created_by = $request->user()->id;
-       $listing->status = 1;
-       $listing->save(); 
+      $listing->status = 1;
+
+      $input =  $request->file();
+      $images = $input['image'];
+      $path = $request->file('image')->store('public/agentImages');
+      $exploded_string = explode("public",$path);
+      $listing->image = asset("storage".$exploded_string[1]);
+      $listing->save();
 
 
       // Image code begins here 
 
-      if($request->hasFile('listingimageone')) {
-        $listingimageone = $request->listingimageone;
-        $path = $request->file('listingimageone')->store('public/listingImages');
+      // if($request->hasFile('listingimageone')) {
+      //   $listingimageone = $request->listingimageone;
+      //   $path = $request->file('listingimageone')->store('public/listingImages');
 
-        $exploded_string = explode("public", $path);
-        $listingimageone = asset("storage{$exploded_string[1]}");
-        $indexone = $exploded_string[1];
+      //   $exploded_string = explode("public", $path);
+      //   $listingimageone = asset("storage{$exploded_string[1]}");
+      //   $indexone = $exploded_string[1];
         
-        explode("listingImages", $indexone);
-        $listingimage = new ListingImage;
-        $listingimage->listing_id = $listing->id;
-        $listingimage->path = "/storage";
-        $listingimage->name = $listing->headline." image";
-        $listingimage->url = "/storage/listingImages";
-        $listingimage->listingimageone = $listingimageone;
+      //   explode("listingImages", $indexone);
+      //   $listingimage = new ListingImage;
+      //   $listingimage->listing_id = $listing->id;
+      //   $listingimage->path = "/storage";
+      //   $listingimage->name = $listing->headline." image";
+      //   $listingimage->url = "/storage/listingImages";
+      //   $listingimage->listingimageone = $listingimageone;
 
-        $listingimage->save();
-        
+      //   $listingimage->save();
+      // }
+
+
+
       return response()->json([
         "success"=>true,
         "message"=> "Listing stored successfully"
       ], 200);
-
-    }
   }
   public function showListing($id)
     {

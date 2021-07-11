@@ -56,7 +56,9 @@
         <div class="card-box-a border">
           <div class="img-box-a">
             {{-- <img src= " {{asset('img/property-10.jpg')}}" alt="" class="img-a img-fluid"> --}}
-            <img src="{{asset('img/cameroon-house-1.jpeg')}}" alt="" class="img-a img-fluid" style="width:500px">
+            <img src="{{ $listing->image }}" alt="" class="img-a img-fluid" style="width:500px">
+            {{-- <img src="{{ $listingImages->listingimageone }}" alt="" class="img-a img-fluid" style="width:500px"> --}}
+
             <h4 class="pt-3"><span class="badge badge-success">verified</span></h4>
           </div>
     

@@ -105,23 +105,21 @@
                   <div class="card-box-c foo">
                     <div class="card-header-c d-flex">
                       <div class="card-box-ico">
-                        <span class="fa fa-gamepad"></span>
+                        {{-- <span class="fa fa-gamepad"></span> --}}
                       </div>
                       <div class="card-title-c align-self-center">
-                        <h2 class="title-c">Lifestyle</h2>
+                        <h2 class="title-c">Step 1</h2>
                       </div>
                     </div>
                     <div class="card-body-c">
                       <p class="content-c">
-                        Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                        convallis a pellentesque
-                        nec, egestas non nisi.
+                       Fill the form and insert your personal information into the form
                       </p>
                     </div>
                     <div class="card-footer-c">
-                      <a href="#" class="link-c link-icon">Read more
+                      {{-- <a href="#" class="link-c link-icon">Read more
                         <span class="ion-ios-arrow-forward"></span>
-                      </a>
+                      </a> --}}
                     </div>
                   </div>
                 </div>
@@ -129,23 +127,21 @@
                   <div class="card-box-c foo">
                     <div class="card-header-c d-flex">
                       <div class="card-box-ico">
-                        <span class="fa fa-usd"></span>
+                        {{-- <span class="fa fa-usd"></span> --}}
                       </div>
                       <div class="card-title-c align-self-center">
-                        <h2 class="title-c">Loans</h2>
+                        <h2 class="title-c">Step 2</h2>
                       </div>
                     </div>
                     <div class="card-body-c">
                       <p class="content-c">
-                        Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Mauris blandit
-                        aliquet elit, eget tincidunt
-                        nibh pulvinar a.
+                        Upload Image of ID-CARD to know more about you and your legitimacy. And to know more about you as an individual
                       </p>
                     </div>
                     <div class="card-footer-c">
-                      <a href="#" class="link-c link-icon">Read more
+                      {{-- <a href="#" class="link-c link-icon">Read more
                         <span class="ion-ios-arrow-forward"></span>
-                      </a>
+                      </a> --}}
                     </div>
                   </div>
                 </div>
@@ -153,23 +149,21 @@
                   <div class="card-box-c foo">
                     <div class="card-header-c d-flex">
                       <div class="card-box-ico">
-                        <span class="fa fa-home"></span>
+                        {{-- <span class="fa fa-home"></span> --}}
                       </div>
                       <div class="card-title-c align-self-center">
-                        <h2 class="title-c">Sell</h2>
+                        <h2 class="title-c">Step 3</h2>
                       </div>
                     </div>
                     <div class="card-body-c">
                       <p class="content-c">
-                        Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                        convallis a pellentesque
-                        nec, egestas non nisi.
+                        Take image using webcam. This image will be set as your avatar and will be used for further verification of your account
                       </p>
                     </div>
                     <div class="card-footer-c">
-                      <a href="#" class="link-c link-icon">Read more
+                      {{-- <a href="#" class="link-c link-icon">Read more
                         <span class="ion-ios-arrow-forward"></span>
-                      </a>
+                      </a> --}}
                     </div>
                   </div>
                 </div>
@@ -275,7 +269,7 @@
                                   <br>
                                   <div>
                                       <img src="{{ asset('img/uploadimage.jpg')}}" alt="" width="200px">
-                                      <input type="file" class="form-control-file" id="exampleFormControlFile1" name="idimage">                                        
+                                      <input type="file" class="form-control-file" id="image" name="image">                                        
                                   </div> 
                                 </div>
                             </div> 
