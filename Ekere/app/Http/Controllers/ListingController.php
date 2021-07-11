@@ -26,29 +26,38 @@ class ListingController extends Controller
 
     public function storeListing(Request $request)
     {
+        $listing = new Listing;
+        $listing->description = $request->description;
+        $listing->headline = $request->headline;
+        $listing->bedroom = $request->bedroom;
+        $listing->bathroom = $request->bathroom; 
+        $listing->palor = $request->palor; 
+        $listing->kitchen = $request->kitchen; 
+        $listing->price = $request->price; 
+        $listing->city_id = $request->city_id; //city_id
+       //  Ask Boss about latitude and longitude
+        $listing->latitude = $request->inputlatitude;
+        $listing->longitude = $request->inputlongitude;
+       //  $listing->created_by = $request->user()->id;
+       $listing->status = 1;
+ 
+       $input =  $request->file();
+       $images = $input['image'];
+       $path = $request->file('image')->store('public/agentImages');
+       $exploded_string = explode("public",$path);
+       $listing->image = asset("storage".$exploded_string[1]);
+       $listing->save();
 
-       $listing = new Listing;
-       $listing->description = $request->description;
-       $listing->headline = $request->headline;
-       $listing->bedroom = $request->bedroom;
-       $listing->bathroom = $request->bathroom; 
-       $listing->palor = $request->palor; 
-       $listing->kitchen = $request->kitchen; 
-       $listing->price = $request->price; 
-       $listing->city_id = $request->city_id; //city_id
-      //  Ask Boss about latitude and longitude
-       $listing->latitude = $request->inputlatitude;
-       $listing->longitude = $request->inputlongitude;
-      //  $listing->created_by = $request->user()->id;
-      $listing->status = 1;
+      
+      //  return response()->json([
+      //   "success"=>true,
+      //   "message"=> "Listing stored successfully"
+      // ], 200);
+      return view('front.listing-successful');
+   
 
-      $input =  $request->file();
-      $images = $input['image'];
-      $path = $request->file('image')->store('public/agentImages');
-      $exploded_string = explode("public",$path);
-      $listing->image = asset("storage".$exploded_string[1]);
-      $listing->save();
-
+      // return redirect()->back()
+      // ->with('success', 'Created successfully!');
 
       // Image code begins here 
 
@@ -73,10 +82,10 @@ class ListingController extends Controller
 
 
 
-      return response()->json([
-        "success"=>true,
-        "message"=> "Listing stored successfully"
-      ], 200);
+      // return response()->json([
+      //   "success"=>true,
+      //   "message"=> "Listing stored successfully"
+      // ], 200);
   }
   public function showListing($id)
     {

@@ -14,6 +14,7 @@
 
    
         @yield('content')
+        @include('sweetalert::alert')
 
 
         @include('front.layouts._javascript')

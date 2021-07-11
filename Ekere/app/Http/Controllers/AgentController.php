@@ -92,11 +92,13 @@ class AgentController extends Controller
       // }   
 
 
-      
-      return response()->json([
-        "success"=>true,
-        "message"=> "Agent stored successfully"
-    ], 200);
+      return view('front.agent-successful');
+
+    //   return response()->json([
+    //     "success"=>true,
+    //     "message"=> "Agent stored successfully"
+    // ], 200);
+
     }
 
          // show

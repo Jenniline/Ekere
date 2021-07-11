@@ -260,7 +260,7 @@
                       </div> 
                     </div>   --}}
                     <div class="col-md-12">
-                      <button type="submit" class="btn btn-a btn-lg btn-block">submit</button>
+                      <button type="submit" class="btn btn-a btn-lg btn-block" data-target="#exampleModal">submit</button>
                     </div>
                   </div>
                 </form>
