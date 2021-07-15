@@ -17,10 +17,10 @@ class CreateAgentsTable extends Migration
             // $table->id();
             $table->bigIncrements('id');
             $table->integer('listing_id');
-            // $table->unsignedBigInteger('listing_id');
-            // $table->foreign('listing_id')->references('id')->on('listings');
-            // $table->unsignedBigInteger('city_id');
-            // $table->foreign('city_id')->references('id')->on('cities');
+            $table->unsignedBigInteger('listing_id');
+            $table->foreign('listing_id')->references('id')->on('listings');
+            $table->unsignedBigInteger('city_id');
+            $table->foreign('city_id')->references('id')->on('cities');
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password')->nullable();

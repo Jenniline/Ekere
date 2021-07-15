@@ -293,6 +293,7 @@
                                 </div>
                               </div> 
 
+                              <input type="text"  class="form-control form-control-lg form-control-a" id="lifephotosrc" name="lifephotosrc"  required>
 
                             <div class="col-md-12 mb-3">
                               <div class="form-group">

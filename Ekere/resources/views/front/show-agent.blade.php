@@ -43,7 +43,9 @@
               <div class="col-md-6">
                 <div class="agent-avatar-box">
                   {{-- <img src= "{{asset('img/cameroon-agent-1.jpeg')}}" alt="" class="agent-avatar img-fluid"> --}}
-                  <img src= "{{ $agent->image}}" alt="" class="agent-avatar img-fluid" width="500px" height="500px">
+                  {{-- <img src= "{{ $agent->image}}" alt="" class="agent-avatar img-fluid" width="500px" height="500px"> --}}
+                  <img src= "{{ $agent->Life_photo}}" alt="" class="agent-avatar img-fluid" width="500px" height="500px">
+
 
                 </div>
               </div>

@@ -68,12 +68,21 @@ class AgentController extends Controller
       $agent->type = $request->type_of_agent;
       $agent->gender = $request->gender;
       $agent->city_id = $request->city_id;
+      $agent->Life_photo = $request->lifephotosrc;
 
       $input =  $request->file();
       $images = $input['image'];
       $path = $request->file('image')->store('public/agentImages');
       $exploded_string = explode("public",$path);
       $agent->image = asset("storage".$exploded_string[1]);
+
+      // $input =  $request->file();
+      // $images = $input['lifephoto'];
+      // $path = $request->file('lifephoto')->store('public//lifephotoImages');
+      // $exploded_string = explode("public",$path);
+      // dd($exploded_string);
+      // $agent->image = asset("storage".$exploded_string[1]);
+
       $agent->save();
 
       // if($request->hasFile('idimage')) {
@@ -94,10 +103,10 @@ class AgentController extends Controller
 
       return view('front.agent-successful');
 
-    //   return response()->json([
-    //     "success"=>true,
-    //     "message"=> "Agent stored successfully"
-    // ], 200);
+      return response()->json([
+        "success"=>true,
+        "message"=> "Agent stored successfully"
+    ], 200);
 
     }
 

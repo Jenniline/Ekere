@@ -14,7 +14,7 @@
                 <div class="card-header">{{ __('Verify Your Email Address') }}</div>
 
                 <div class="card-body">
-                    <img src=" {{asset('img/verify-email.png')}} " alt="" class="img-d img-fluid" style="width:600px; height:400px"> 
+                    {{-- <img src=" {{asset('img/verify-email.png')}} " alt="" class="img-d img-fluid" style="width:600px; height:400px">  --}}
                     <h1 class="text-success">Verify your email address</h1>
                     @if (session('resent'))
                         <div class="alert alert-success" role="alert">

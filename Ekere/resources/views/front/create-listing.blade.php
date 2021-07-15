@@ -187,8 +187,7 @@
 
                     
                   </div>
-                  
-                  
+                
                   <p>
                     Your location is <span id="latitude">0.00</span>°
                     latitude by <span id="longitude">0.00</span>° longitude.
