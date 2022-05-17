@@ -1,66 +1,58 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Safe Housing 
+Safe Housing Project is a real estate platform developed to enable real estate agents post real estate property for rent or for sale. 
+In this platform I included security features to solve the problem of fake agents signing up and using the platform for fraudulent purposes. For  Example posting lisitngs to mislead users.
 
-## About Ekere
-- Name of this project is Ekere: meaning house in Bayangi(Kenyang) Language
-- This project is to create a service where realtors can publish their listings and the progress of a listing is monitored until it is taken by a client and is no longer available. Therefore it should be pulled out of the platform.
-- Also there will be inclusion of 360 images for future implementation of VR
+This project of course has its setbacks and was developed for the Cameroon milieu. It was developed folowing the real estate market in Cameroon.
+Nevertheless the project should suit other real estate markets.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## Specific Objectivies
+1. Verify and Validate a Legitimate Agent
+2. Verify and Validate a Legitimate Listing
+3. The platform should be simple to use with a simple UI/UX for users of any standard.
 
-## About Laravel
+## Proposed Methodology 
+ ### Verify and Validate a Legitimate Agent
+   
+   1. Person Verification: Use Image processing to verify agent's appearance on 2 different images. Image uploaded during sign up and image on ID CARD.
+        - During Sign Up the user uploads an image of his ID CARD that contains his face and also takes an instant image using his device Camera. I used JavaScript to open device camera and take the image (https://github.com/Jenniline/Agent-lifePhoto)  then Laravel is used to save the image in the database. 
+         -   The Face detection: Arcface applies MTCNN detector for face detection and alignment model.\
+         -   Face comparison: Arcface employs LResNet 100E-IR model that uses ResNet100 as a backend with modified input and output layers. We determine whether two faces are similar or not by using a threshold.The Thresholds are 0.6, 0.7, and 0.8.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+   2. Email Verification: The agent's Email will be verified using Laravel's in built verification technique calledMustVerifyEmail technique and mailtrap Emailing service to serve as a supposed user account. 
+   3. Phone number verification using Twilio: Here the agent’s phone number is verified to ensure that the agent has used a valid phone number that is reachable and active and not just some dummy phone number for a malicious purpose.
+   4. Verification using voice call: The admin can call the Phone number of the agent during the verification phase and ask the agent specific
+questions here to ensure that the phone number is valid and reachable. Example questions; 
+        - Is your name  Jane Doe?
+        - Are you really an agent in Buea?
+        - Do you have a real estate license authorization?
+ After all these verifications are successful and the user has been validated, the user is now eligible to post a listing.  
 
-## Learning Laravel
+ ### Verify and Validate a Legitimate Listing
+ 
+ 1. Use of Integrated Map: 
+    - A listing is a property that is posted on the platform. In this case. A listing can only be posted in the location in which it was filmed or captured. That is the location of the property.Therefore meaning that the listing images are only taken on the spot and cannot be uploaded from the gallery.
+    - To achieve this, The latitude and the longitude is tapped from the agent’s browser location using a package called Geolocation, that determines the coordinates of the user and the position is displayed using a map. The map used in this case is mapbox (mapbox.com)
+    
+  ## Present Results and Expected Results
+ 1. Image on the right, Image taken using device camera. Image on left Image from user ID CARD
+![instant-photo-1](https://user-images.githubusercontent.com/39647995/166158603-e838ad08-841c-4cbe-89c1-3b0ddaa6e6f3.png)
+![my-face-extraction-cropped](https://user-images.githubusercontent.com/39647995/166158730-d6f55cce-673d-43d2-ab6c-9e8df7e5647c.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![safe-house-1](https://user-images.githubusercontent.com/39647995/166159102-5cc77745-d0ae-47ca-bd6c-a9bf18b84f3c.png)
+![safe-house-1-cropped](https://user-images.githubusercontent.com/39647995/166159213-dad39851-8a6d-4595-9bd2-e89562764a15.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Full Documentary of the project found here https://the-tech-learner.blogspot.com/2022/05/developing-real-estate-platform-using.html
 
-## Laravel Sponsors
+##  Work still to be done
+1. The integration of Twilio is not yet complete
+2. Perfectly use ArcFace and MTCNN to Face detection and Comparison for this project. It is not yet feasible in Laravel. 
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Reference to the study on Person Verificaition https://www.researchgate.net/publication/335143642_Personal_Verification_System_Using_ID_Card_and_Face_Photo
 
-### Premium Partners
+Project can be found here https://jenns-safe-housing.herokuapp.com/
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+learn more about the project here 
+https://the-tech-learner.blogspot.com/2022/05/developing-real-estate-platform-using.html
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
